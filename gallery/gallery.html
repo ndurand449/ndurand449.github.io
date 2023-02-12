@@ -1,0 +1,76 @@
+<!-------------------------------->
+<!-- My Photo Gallery - v 0.0 ---->
+<!-------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Photo Gallery</title>
+
+    <!-- from w3schools.com, using Bootstrap v3 -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--Include Your Style Sheets next -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+  </head>
+
+  <body>
+    <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">My Photo Gallery</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="gallery.html">Home</a></li>
+            <li><a href="flowers.html">Flowers</a></li>
+            <li><a href="wildlife.html">Wildlife</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome to my Photo Gallery</h1>
+    <p>These photos were taken at our home in Connecticut. Enjoy!</p>
+
+    <div id="tablediv">
+    <table class="table table-striped table-border">
+      <caption>Wildlife viewings</caption>
+      <tr><th>Date</th><th>Animal</th></tr>
+      <tr><td>2/5/2023</td><td>Red fox</td></tr>
+      <tr><td>9/30/2022</td><td>Bobcat</td></tr>
+      <tr><td>9/4/2022</td><td>Baby snake</td></tr>
+      <tr><td>8/29/2022</td><td>Snake</td></tr>
+      <tr><td>8/27/2022</td><td>Rabbit</td></tr>
+      <tr><td>8/19/2022</td><td>Ant & Beetle</td></tr>
+      <tr><td>7/28/2022</td><td>Turkey</td></tr>
+      <tr><td>7/18/2022</td><td>Red fox</td></tr>
+      <tr><td>7/15/2023</td><td>Green worm</td></tr>
+      <tr><td>7/8/2022</td><td>Baby deer</td></tr>
+    </table>
+    </div>
+  
+  </main>
+  <footer class="navbar-default navbar-inverse">
+    <p>&copy 2023 - ND</p>
+  </footer>
+  </body>
+</html>
