@@ -1,11 +1,33 @@
+/*------------------------------*/
+/*-- My Photo Gallery - v 1.1 --*/
+/*--  last update 2023-02-12  --*/
+/*------------------------------*/
+
 body {
 	margin: 1vw;
 }
 
+#menusign{
+	color: #fff;
+}
 
 #tablediv{
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+	#tablediv{
+		width: 65%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width:992px) {
+	#tablediv{
+		width: 50%;
+		margin: 0 auto;
+	}
 }
 
 img, video {
