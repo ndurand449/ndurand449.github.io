@@ -32,7 +32,7 @@ button, .btn {
 
 .btn.active {
 	box-shadow: none;
-	background-color: #35a7ff !important;	/*blue*/
+	background-color: #0074cc !important;	/*blue*/
 }
 
 a {
@@ -63,7 +63,7 @@ main {
 }
 
 h1 {
-	color: #35a7ff;		/*blue*/
+	color: #0074cc;		/*blue*/
 }
 
 details {
@@ -90,7 +90,7 @@ details > p > a {
 }
 
 img {
-	border: solid 1px #35a7ff;	/*blue*/
+	border: solid 1px #0074cc;	/*blue*/
 }
 
 .noborder {
