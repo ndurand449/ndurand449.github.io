@@ -21,6 +21,7 @@ nav, footer {
 
 button, .btn {
 	background-color: #f26419 !important;	/*orange*/
+	color: #000000;
 	margin: 10px 30px;
 }
 
@@ -33,10 +34,15 @@ button, .btn {
 .btn.active {
 	box-shadow: none;
 	background-color: #0074cc !important;	/*blue*/
+	color: #ffffff !important;
+}
+
+.btn:hover {
+	color: #ffffff;
 }
 
 a {
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold !important;
 }
 
