@@ -1,0 +1,85 @@
+<!---------------------------->
+<!-- My Tools - v 1.0       -->
+<!-- last update 2023-02-21 -->
+<!---------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Tools</title>
+
+    <!-- from w3schools.com, using Bootstrap v3 -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--Include Your Style Sheets next -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+  </head>
+
+  <body>
+    <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">My Tools</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a class="btn" href="currency.html">EUR/USD</a></li>
+            <li><a class="btn active " href="treasuries.html">Treasuries</a></li>
+            <li><a class="btn" href="wildlifegallery.html">Gallery</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>Treasury Data</h1>
+    <p>Updated on 2/17/2023</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <details>
+            <summary>Year-to-Date actual data</summary>
+            <p>Exchange rates retrieved monthly from <a href="https://apilayer.com/">APILayer</a>. Output shows the average rate, and the minimum and maximum rates for the chosen year, and the dates these occured.</p>
+          </details>
+          <img class="img-responsive" src="img/analyze1py.PNG" alt="year-to-date">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <details>
+            <summary>Forecast data</summary>
+            <p>Analysts' forecast are entered monthly and used to calculate a forecast range for the last day of the chosen year. Output shows the average forecast, the lower forecast, and upper forecast.</p>
+          </details>
+          <img class="img-responsive" src="img/analyze2py.PNG" alt="forecast">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+        <details>
+          <summary>Forecast chart</summary>
+          <p>The forecast data is shown in a chart. The green line on the left shows the actual data for the prior year and the chosen year, year-to-date. The colored lines on the right show the forecast range for the remaining of the chosen year.</p>
+        </details>
+        <img class="img-responsive" src="img/mycharthtml.PNG" alt="chart">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy 2023 - ND - version 1.0</p>
+  </footer>
+  </body>
+</html>

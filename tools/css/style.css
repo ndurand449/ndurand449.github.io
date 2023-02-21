@@ -1,0 +1,121 @@
+/*----------------------------*/
+/*-- My Tools - v 1.0       --*/
+/*-- last update 2023-02-21 --*/
+/*----------------------------*/
+
+/*----- Navigation bar & footer -----*/
+
+nav, footer {
+	background-color: #7d4600;	/*chocolate*/
+}
+
+.navbar {
+	border-radius: 0px;
+}
+
+.navbar-brand {
+	width: 150px;
+	font-weight: bold;
+	color: #c1df1f !important;	/*pear*/
+}
+
+button, .btn {
+	background-color: #f26419 !important;	/*orange*/
+	margin: 10px 30px;
+}
+
+.btn {
+	height: 30px;
+	width: 100px;
+	padding: 5px !important;
+}
+
+.btn.active {
+	box-shadow: none;
+	background-color: #35a7ff !important;	/*blue*/
+}
+
+a {
+	color: #ffffff;
+	font-weight: bold !important;
+}
+
+.icon-bar {
+	background-color: #ffffff;
+}
+
+footer {
+	height: 20px;
+	margin-top: 30px;
+	padding-top: 2px;
+	padding-left: 15px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 80%;
+	color: #c1df1f;	/*pear*/
+}
+
+
+/*----- Content -----*/
+
+main {
+	margin: 15px;
+}
+
+h1 {
+	color: #35a7ff;		/*blue*/
+}
+
+details {
+	display: inline-block;
+	float: left;
+}
+
+summary {
+	cursor: pointer;
+	display: list-item;
+	font-weight: bold;
+	font-size: 150%;
+	color: #f26419;	/*orange*/
+	padding-top: 10px;
+}
+
+details > p {
+	margin: 0px 25px;
+	padding-bottom: 10px;
+}
+
+details > p > a {
+	color: #f26419;	/*orange*/;
+}
+
+img {
+	border: solid 1px #35a7ff;	/*blue*/
+}
+
+.noborder {
+	border: none;	
+	margin-top: 15px;
+}
+
+/*
+#tablediv{
+	width: 80%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+	#tablediv{
+		width: 65%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width:992px) {
+	#tablediv{
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+*/
