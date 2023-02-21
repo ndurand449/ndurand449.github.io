@@ -22,6 +22,7 @@ nav, footer {
 button, .btn {
 	background-color: #f26419 !important;	/*orange*/
 	color: #000000;
+	font-weight: bold !important;
 	margin: 10px 30px;
 }
 
@@ -39,11 +40,6 @@ button, .btn {
 
 .btn:hover {
 	color: #ffffff;
-}
-
-a {
-	color: #000000;
-	font-weight: bold !important;
 }
 
 .icon-bar {
@@ -82,7 +78,7 @@ summary {
 	display: list-item;
 	font-weight: bold;
 	font-size: 150%;
-	color: #f26419;	/*orange*/
+	color: #c14b0b;		/*mahogany*/
 	padding-top: 10px;
 }
 
@@ -103,25 +99,3 @@ img {
 	border: none;	
 	margin-top: 15px;
 }
-
-/*
-#tablediv{
-	width: 80%;
-	margin: 0 auto;
-}
-
-@media screen and (min-width:768px) {
-	#tablediv{
-		width: 65%;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (min-width:992px) {
-	#tablediv{
-		width: 50%;
-		margin: 0 auto;
-	}
-}
-
-*/
