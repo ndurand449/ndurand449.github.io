@@ -89,6 +89,7 @@ details > p {
 
 details > p > a {
 	color: #c14b0b;		/*mahogany*/
+	text-decoration: underline;
 }
 
 img {
