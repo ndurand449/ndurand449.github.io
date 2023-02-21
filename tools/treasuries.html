@@ -24,6 +24,7 @@
     <!--Include Your Style Sheets next -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/ico" href="favicon.ico">
+
   </head>
 
   <body>
@@ -40,9 +41,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a class="btn" href="currency.html">EUR/USD</a></li>
-            <li><a class="btn active " href="treasuries.html">Treasuries</a></li>
-            <li><a class="btn" href="wildlifegallery.html">Gallery</a></li> 
+            <li><a class="btn hover" href="currency.html">EUR/USD</a></li>
+            <li><a class="btn active" href="treasuries.html">Treasuries</a></li>
+            <li><a class="btn hover" href="wildlifegallery.html">Gallery</a></li> 
           </ul>
         </div>
       </div>
@@ -55,26 +56,19 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6">
           <details>
-            <summary>Year-to-Date actual data</summary>
-            <p>Exchange rates retrieved monthly from <a href="https://apilayer.com/">APILayer</a>. Output shows the average rate, and the minimum and maximum rates for the chosen year, and the dates these occured.</p>
+            <summary>Yield curve</summary>
+            <p>Par yield curve rates are retrieved weekly from <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023">the U.S. Treasury</a>. This graph shows the yield curve for the past 3 fridays.</p>
           </details>
-          <img class="img-responsive" src="img/analyze1py.PNG" alt="year-to-date">
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <details>
-            <summary>Forecast data</summary>
-            <p>Analysts' forecast are entered monthly and used to calculate a forecast range for the last day of the chosen year. Output shows the average forecast, the lower forecast, and upper forecast.</p>
-          </details>
-          <img class="img-responsive" src="img/analyze2py.PNG" alt="forecast">
+          <img class="img-responsive" src="img/WeeklyMobile.PNG" alt="yield curves">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <details>
-            <summary>Forecast chart</summary>
-            <p>The forecast data is shown in a chart. The green line on the left shows the actual data for the prior year and the chosen year, year-to-date. The colored lines on the right show the forecast range for the remaining of the chosen year.</p>
+            <summary>Par yield curve</summary>
+            <p>Par yield curve rates are retrieved weekly from <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023">the U.S. Treasury</a>. This graph shows the historical rates for all the treasury bills, notes, and bonds year-to-date.</p>
           </details>
-          <img class="img-responsive" src="img/mycharthtml.PNG" alt="chart">
+          <img class="img-responsive" src="img/DailyAll.PNG" alt="historical rates">
         </div>
       </div>
     </div>
