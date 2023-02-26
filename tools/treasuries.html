@@ -1,34 +1,35 @@
 <!---------------------------->
-<!-- My Tools - v 1.0       -->
-<!-- last update 2023-02-21 -->
+<!-- My Tools - v 2.0       -->
+<!-- last update 2023-02-26 -->
 <!---------------------------->
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Tools</title>
 
-    <!-- from w3schools.com, using Bootstrap v3 -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Tools</title>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- from w3schools.com, using Bootstrap v3 -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    <!--Include Your Style Sheets next -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" type="image/ico" href="favicon.ico">
+  <!-- Latest compiled JavaScript -->
+  <script type="text/javascript" src="js/updatedate.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  </head>
+  <!--Include Your Style Sheets next -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/ico" href="img/favicon.ico">
+</head>
 
-  <body>
-    <header>
+<body>
+  <header>
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -49,31 +50,36 @@
       </div>
     </nav>
   </header>
+
   <main>
     <h1>Treasury Data</h1>
-    <p>Updated on 2/24/2023</p>
+    <p  id="update"></p>
+    <script>document.getElementById("update").innerHTML = "Updated on " + updatetre</script>
+
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-md-6">
           <details>
             <summary>Yield curve</summary>
-            <p>Par yield curve rates are retrieved weekly from <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">the U.S. Treasury</a>. This graph shows the yield curve for the past 3 fridays.</p>
+            <p>Par yield curve rates are retrieved weekly from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the yield curve for the past 3 fridays.</p>
           </details>
           <img class="img-responsive visible-xs" src="img/WeeklyMobile.PNG" alt="yield curves">
           <img class="img-responsive visible-sm visible-md visible-lg" src="img/WeeklyLarge.PNG" alt="par yield curves">
         </div>
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-md-6">
           <details>
             <summary>Par yield curve</summary>
-            <p>Par yield curve rates are retrieved weekly from <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">the U.S. Treasury</a>. This graph shows the historical rates for all the treasury bills, notes, and bonds year-to-date.</p>
+            <p>Par yield curve rates are retrieved weekly from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the historical rates for all the treasury bills, notes, and bonds year-to-date.</p>
           </details>
           <img class="img-responsive" src="img/DailyAll.PNG" alt="historical rates">
         </div>
       </div>
     </div>
   </main>
+
   <footer>
-    <p>&copy; 2023 - ND - version 1.0</p>
+    <p id="copy"></p>
+    <script>document.getElementById("copy").innerHTML = "&copy; " + copyyear + " - ND - version 2.0"</script>
   </footer>
-  </body>
+</body>
 </html>
