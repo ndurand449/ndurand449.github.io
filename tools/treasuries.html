@@ -1,6 +1,7 @@
 <!---------------------------->
-<!-- My Tools - v 2.0       -->
-<!-- last update 2023-02-26 -->
+<!-- My Tools - v 4.0       -->
+<!-- treasuries.html        -->
+<!-- last update 2023-03-06 -->
 <!---------------------------->
 
 <!DOCTYPE html>
@@ -20,10 +21,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <!-- Latest compiled JavaScript -->
-  <script type="text/javascript" src="js/updatedate.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <!--Include Your Style Sheets next -->
+  <!-- JavaScript -->
+  <!-- TABLE -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="js/dataTreasTransposedRolling5.js"></script>
+  <script type="text/javascript" src="js/tabledrawTreas.js"></script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+  </script>
+
+  <!-- CHARTS -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="js/dataTreasTransposedRolling4Fri.js"></script>
+  <script type="text/javascript" src="js/dataTreasRolling28.js"></script>
+  <script type="text/javascript" src="js/chartdrawTreas.js"></script>
+  <script type="text/javascript">
+    google.load("visualization", 'current', {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart0);
+    google.setOnLoadCallback(drawChart1);
+  </script>
+
+  <!-- Style Sheets -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" type="image/ico" href="img/favicon.ico">
 </head>
@@ -53,33 +74,46 @@
 
   <main>
     <h1>Treasury Data</h1>
-    <p  id="update"></p>
-    <script>document.getElementById("update").innerHTML = "Updated on " + updatetre</script>
+    <p  id="updatetre"></p>
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-md-6">
           <details>
             <summary>Yield curve</summary>
-            <p>Par yield curve rates are retrieved weekly from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the yield curve for the past 3 fridays.</p>
+            <p>Par yield curve rates are retrieved weekly from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the yield curve on the past 3 fridays.</p>
           </details>
-          <img class="img-responsive visible-xs" src="img/WeeklyMobile.PNG" alt="yield curves">
-          <img class="img-responsive visible-sm visible-md visible-lg" src="img/WeeklyLarge.PNG" alt="par yield curves">
+          <div id="chart_div_Treas0" class="chart">
+          </div>
         </div>
         <div class="col-xs-12 col-md-6">
           <details>
-            <summary>Par yield curve</summary>
-            <p>Par yield curve rates are retrieved weekly from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the historical rates for all the treasury bills, notes, and bonds year-to-date.</p>
+            <summary>Daily Treasury Par Yield Curve Rates</summary>
+            <p>Daily Treasury Par Yield Curve Rates are retrieved from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This table shows the rates for the last 6 business days for all the treasury bills, notes, and bonds.</p>
           </details>
-          <img class="img-responsive" src="img/DailyAll.PNG" alt="historical rates">
+          <div id="table_div_Treas" class="table">
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <details>
+            <summary>Par yield curve</summary>
+            <p>Par yield curve rates are retrieved weekly from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the historical rates since January 1st 2022 for all the treasury bills, notes, and bonds,up until now.</p>
+          </details>
+        </div>
+      </div>
+      <div id="chart_div_Treas1" class="chart">
       </div>
     </div>
   </main>
 
   <footer>
     <p id="copy"></p>
-    <script>document.getElementById("copy").innerHTML = "&copy; " + copyyear + " - ND - version 2.0"</script>
   </footer>
+
+  <!-- More JavaScript -->
+  <script type="text/javascript" src="js/updatedate.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!---------------------------->
-<!-- My Tools - v 2.0       -->
-<!-- last update 2023-02-26 -->
+<!-- My Tools - v 4.0       -->
+<!-- currency.html          -->
+<!-- last update 2023-03-06 -->
 <!---------------------------->
 
 <!DOCTYPE html>
@@ -25,7 +26,6 @@
   <!-- JavaScript -->
   <script type="text/javascript" src="js/chartdata.js"></script>
   <script type="text/javascript" src="js/chartdraw.js"></script>
-  <script type="text/javascript" src="js/updatedate.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type="text/javascript">
     google.load("visualization", "1", {packages:["corechart"]});
@@ -62,8 +62,7 @@
 
   <main>
     <h1>Currency Forecast: EUR/USD</h1>
-    <p  id="update"></p>
-    <script>document.getElementById("update").innerHTML = "Updated on " + updatecur</script>
+    <p  id="updatecur"></p>
     
     <div class="container-fluid">
       <div class="row">
@@ -90,18 +89,24 @@
           <details>
             <summary>Forecast graph</summary>
             <p>Currency Forecast Using Year-To-Date Actual Data and Analysts' Data. <br>
-            The forecast data is shown in a graph. The green line on the left shows the actual year-to-date data for the prior year and the selected year. The colored lines on the right show the forecast range for the remainder of the selected year.</p>
+            The forecast data is shown in a <a href="https://developers-dot-devsite-v2-prod.appspot.com/chart" target="_blank">Google Chart</a> graph. The blue line on the left shows the actual year-to-date data for the prior year and the selected year. The colored lines on the right show the forecast range for the remainder of the selected year.</p>
           </details>
         </div>
       </div>
-      <div id="chart_div" class="chart">
-      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="chart_div" class="chart"></div>
+        </div>
+      </div>  
     </div>
   </main>
 
   <footer>
     <p id="copy"></p>
-    <script>document.getElementById("copy").innerHTML = "&copy; " + copyyear + " - ND - version 2.0"</script>
   </footer>
+
+  <!-- More JavaScript -->
+  <script type="text/javascript" src="js/updatedate.js"></script>
+
 </body>
 </html>
