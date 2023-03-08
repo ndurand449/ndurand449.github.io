@@ -1,30 +1,11 @@
 //----------------------------
-//-- My Tools - v 2.0       --
-//-- last update 2023-02-26 --
+//-- My Tools - v 4.0       --
+//-- updatedate.js          --
+//-- last update 2023-03-06 --
 //----------------------------
 
 //-- Current year for footer for html files
 
 var d = new Date();
 copyyear = d.getFullYear();
-console.log(copyyear);
-
-
-//-- Data extraction from picture file to build: "Updated on date" - currency.html
-
-var reqcur = new XMLHttpRequest();
-reqcur.open('GET', 'https://ndurand449.github.io/tools/img/analyze1pyBW.PNG', false);
-reqcur.send(null);
-gmttextcur = reqcur.getResponseHeader('last-modified');
-updatecur = Intl.DateTimeFormat('en-US', {timeZone: "America/New_York"}).format(Date.parse(gmttextcur))
-console.log(updatecur);
-
-
-//-- Data extraction from picture file to build: "Updated on date" - treasuries.html
-
-var reqtre = new XMLHttpRequest();
-reqtre.open('GET', 'https://ndurand449.github.io/tools/img/DailyAll.PNG', false);
-reqtre.send(null);
-gmttexttre = reqcur.getResponseHeader('last-modified');
-updatetre = Intl.DateTimeFormat('en-US', {timeZone: "America/New_York"}).format(Date.parse(gmttexttre))
-console.log(updatetre);
+document.getElementById("copy").innerHTML = "&copy; " + copyyear + "- ND - version 4.0";
