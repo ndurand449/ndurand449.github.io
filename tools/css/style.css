@@ -1,13 +1,21 @@
 /*----------------------------*/
-/*-- My Tools - v 2.0       --*/
-/*-- last update 2023-02-26 --*/
+/*-- My Tools - v 4.0       --*/
+/*-- style.css              --*/
+/*-- last update 2023-03-06 --*/
 /*----------------------------*/
 
 /*----- Navigation bar & footer -----*/
 
 body {
 	font-family: Verdana,Helvetica,Arial,sans-serif;
-	font-size: 14px;
+	font-size: 12pt !important;
+	display: flex;				/*sticky footer*/
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main{
+	flex: 1;
 }
 
 nav, footer {
@@ -66,25 +74,26 @@ footer {
 /*----- Content -----*/
 
 main {
-	margin: 15px;
+	margin: 0px 15px;
 }
 
 h1 {
 	color: #0074cc;		/*blue*/
 	font-weight: bold;
-	font-size: 250%;
+	font-size: 150% !important;
+	margin-top: 0px;
 }
 
 summary {
 	cursor: pointer;
 	display: list-item;
 	font-weight: bold;
-	font-size: 150%;
+	font-size: 110%;
 	color: #c14b0b;		/*mahogany*/
 	padding-top: 10px;
 }
 
-details {
+details, .chart {
 	display: inline-block;
 	float: left;
 }
@@ -99,13 +108,13 @@ details > p > a {
 	text-decoration: underline;
 }
 
-img, .chart {			/*.chart only used in currency page*/
+img, .chart, .google-visualization-table {	
 	border: solid 1px #0074cc;	/*blue*/
 }
 
 .chart {
 	width: 100% !important;
-	min-height: 300px;
+	min-height: 350px;
 }
 
 .noborder {				/*only used in gallery page*/
@@ -113,6 +122,18 @@ img, .chart {			/*.chart only used in currency page*/
 	margin-top: 15px;
 }
 
+th, td, .google-visualization-table-td.google-visualization-table-type-number {	
+	text-align: center !important;
+}
+
+th {
+	color: #c14b0b;		/*mahogany*/
+}
+
+.google-visualization-table-table {	
+	font-family: Verdana,Helvetica,Arial,sans-serif;
+	font-size: 90% !important;
+}
 
 /*----- Print view -----*/
 
@@ -121,20 +142,20 @@ img, .chart {			/*.chart only used in currency page*/
 		color: #0074cc !important;		/*blue*/
 	}
 
-	summary {
+	summary, th, details > p > a {
 		color: #c14b0b !important;		/*mahogany*/
 	}
 
-	details > p {
-		font-size: 105%;
-	}
-	
 	img {
 		width: 85% !important;
 		margin: 0 auto;
 	}
 
-	.noborder {
+	#chart_div_Treas0 {
+		margin: 0 auto !important;
+	}
+
+	.noborder {			/*only used in gallery page*/
 		width: 32% !important;
 		margin: 7px auto;
 	}
