@@ -1,7 +1,7 @@
 //----------------------------
-//-- My Tools - v 4.0       --
+//-- My Tools - v 5.0       --
 //-- chartdrawTreas.js      --
-//-- last update 2023-03-05 --
+//-- last update 2023-03-12 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -11,17 +11,17 @@ function drawChart0() {
     var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling4Fri);
 
     var options = {
-        fontSize: '12',
+        fontSize: '11',
         fontName: 'Verdana',
         title: 'Treasury Yield Curve',
-        titleTextStyle: {color:'#7d4600', fontSize: '14'},
-        chartArea: {left:'10%', top:'12%', width:'87%', height:'65%'},
+        titleTextStyle: {color:'#7d4600', fontSize: '12'},
+        chartArea: {left:'12%', top:'12%', width:'85%', height:'65%'},
         curveType: 'function',
         vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Number of Months', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f', count: 18}},
-        legend: {position:'bottom', textStyle: {fontSize: '11'}},
+        legend: {position:'bottom', textStyle: {fontSize: '10'}},
         series: {0:{lineWidth: 1}, 1:{lineWidth: 1}, 2:{lineWidth: 1}, 3:{lineWidth: 2}},
     };
 
@@ -38,16 +38,16 @@ function drawChart1() {
     var data = google.visualization.arrayToDataTable(dataTreasRolling28);
 
     var options = {
-        fontSize: '12',
+        fontSize: '11',
         fontName: 'Verdana',
         title: "Treasury Par Yield Curve",
-        titleTextStyle: {color:'#7d4600', fontSize: '14'},
-        chartArea: {left:'6%', top:'12%', width:'92%', height:'65%'},
+        titleTextStyle: {color:'#7d4600', fontSize: '12'},
+        chartArea: {left:'12%', top:'12%', width:'85%', height:'65%'},
         vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
-        legend: {position:'bottom', textStyle: {fontSize: '11'}},
+        legend: {position:'bottom', textStyle: {fontSize: '10'}, maxLines: '5'},
         series: {0:{lineWidth: 1}, 1:{lineWidth: 1}, 2:{lineWidth: 1}, 3:{lineWidth: 2}, 4:{lineWidth: 2}, 
                  5:{lineWidth: 2}, 6:{lineWidth: 2}, 7:{lineWidth: 2}, 8:{lineWidth: 2}, 9:{lineWidth: 1},
                 10:{lineWidth: 1}, 11:{lineWidth: 1, lineDashStyle: [1, 1]}, 12:{lineWidth: 1, lineDashStyle: [1, 1]}},

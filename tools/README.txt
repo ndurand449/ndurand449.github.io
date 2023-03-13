@@ -1,9 +1,10 @@
-Version 4.0 - 2023-03-04
+Version 5.0 - 2023-03-12
 ------------------------
 
 This version includes:
 
-Currency:   Images for outputs
+Currency:   JavaScript outputs
+	    Python to transform outputs into Javascript data sets
 	    Google chart with JavaScript (py4e)
 
 Treasuries: Google Table with JavaScript
@@ -13,7 +14,9 @@ Treasuries: Google Table with JavaScript
 Gallery:    bootstrap 3
 
 CSS:	    adjusted for Google Table
-	    adjusted font-size
+	    adjusted font-size for xs
+	    testing again old lighter colors with different font.
 
-Fixed "Updated on ..."
+
+Batch file to run Currency updates
 Batch file to run Treasury updates

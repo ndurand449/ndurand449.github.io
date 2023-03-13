@@ -1,7 +1,7 @@
 //----------------------------
-//-- My Tools - v 4.0       --
+//-- My Tools - v 5.0       --
 //-- chartdraw.js           --
-//-- last update 2023-03-05 --
+//-- last update 2023-03-12 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -11,11 +11,11 @@ function drawChart() {
     var data = google.visualization.arrayToDataTable(chartdata);
 
     var options = {
-        fontSize: '12',
+        fontSize: '11',
         fontName: 'Verdana',
-        title: "Pair = " + pair + " as of " + date,
-        titleTextStyle: {color:'#7d4600', fontSize: '14'},
-        chartArea: {left:'6%', top:'12%', width:'93%', height:'65%'},
+        title: "Pair = " + pair,
+        titleTextStyle: {color:'#7d4600', fontSize: '12'},
+        chartArea: {left:'12%', top:'12%', width:'85%', height:'65%'},
         vAxis: {title:'Rate', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},

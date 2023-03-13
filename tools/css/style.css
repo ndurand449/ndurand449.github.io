@@ -1,14 +1,17 @@
 /*----------------------------*/
-/*-- My Tools - v 4.0       --*/
+/*-- My Tools - v 5.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-06 --*/
+/*-- last update 2023-03-12 --*/
 /*----------------------------*/
+
+/*French blue = #0074cc, Argentinian = #35a7ff*/
+/*Pantone orange = #f26419, Mahagony = #c14b0b*/
 
 /*----- Navigation bar & footer -----*/
 
 body {
 	font-family: Verdana,Helvetica,Arial,sans-serif;
-	font-size: 12pt !important;
+	font-size: 10pt !important;
 	display: flex;				/*sticky footer*/
 	min-height: 100vh;
 	flex-direction: column;
@@ -24,6 +27,7 @@ nav, footer {
 
 .navbar {
 	border-radius: 0px;
+	margin-bottom: 5px;
 }
 
 .navbar-brand {
@@ -33,7 +37,7 @@ nav, footer {
 }
 
 button, .btn {
-	background-color: #f26419 !important;	/*orange*/
+	background-color: #f26419 !important;	/*orange KEEP*/
 	color: #000000;
 	font-weight: bold !important;
 	margin: 10px 30px;
@@ -47,7 +51,7 @@ button, .btn {
 
 .btn.active {
 	box-shadow: none;
-	background-color: #0074cc !important;	/*blue*/
+	background-color: #35a7ff !important;	/*blue*/
 	color: #ffffff !important;	/*white*/
 }
 
@@ -61,7 +65,7 @@ button, .btn {
 
 footer {
 	height: 20px;
-	margin-top: 30px;
+	margin-top: 15px;
 	padding-top: 2px;
 	padding-left: 15px;
 	font-style: italic;
@@ -74,11 +78,11 @@ footer {
 /*----- Content -----*/
 
 main {
-	margin: 0px 15px;
+	margin: 0px 5px;
 }
 
 h1 {
-	color: #0074cc;		/*blue*/
+	color: #35a7ff;		/*blue*/
 	font-weight: bold;
 	font-size: 150% !important;
 	margin-top: 0px;
@@ -89,32 +93,45 @@ summary {
 	display: list-item;
 	font-weight: bold;
 	font-size: 110%;
-	color: #c14b0b;		/*mahogany*/
-	padding-top: 10px;
+	color: #f26419;		/*mahogany*/
 }
 
 details, .chart {
+	width: 100%;
 	display: inline-block;
 	float: left;
+	background: #ffffff;
+	color: #000000;
 }
 
 details > p {
-	margin: 0px 25px;
+	margin: 0px 17px;
 	padding-bottom: 10px;
 }
 
 details > p > a {
-	color: #c14b0b;		/*mahogany*/
+	color: #f26419;		/*mahogany*/
 	text-decoration: underline;
 }
 
+.output {
+	font-family: consolas;
+	font-size: 90%;
+	background: #ededed;
+	color: #000000;
+}
+
+li {
+	list-style-type: none;
+}
+
 img, .chart, .google-visualization-table {	
-	border: solid 1px #0074cc;	/*blue*/
+	border: solid 1px #35a7ff;	/*blue*/
 }
 
 .chart {
 	width: 100% !important;
-	min-height: 350px;
+	min-height: 240px;
 }
 
 .noborder {				/*only used in gallery page*/
@@ -127,7 +144,7 @@ th, td, .google-visualization-table-td.google-visualization-table-type-number {
 }
 
 th {
-	color: #c14b0b;		/*mahogany*/
+	color: #f26419;		/*mahogany*/
 }
 
 .google-visualization-table-table {	
@@ -135,15 +152,16 @@ th {
 	font-size: 90% !important;
 }
 
+
 /*----- Print view -----*/
 
 @media print {
 	h1 {
-		color: #0074cc !important;		/*blue*/
+		color: #35a7ff !important;		/*blue*/
 	}
 
 	summary, th, details > p > a {
-		color: #c14b0b !important;		/*mahogany*/
+		color: #f26419 !important;		/*mahogany*/
 	}
 
 	img {

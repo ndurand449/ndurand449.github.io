@@ -1,7 +1,7 @@
 <!---------------------------->
-<!-- My Tools - v 4.0       -->
+<!-- My Tools - v 5.0       -->
 <!-- currency.html          -->
-<!-- last update 2023-03-06 -->
+<!-- last update 2023-03-12 -->
 <!---------------------------->
 
 <!DOCTYPE html>
@@ -24,6 +24,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- JavaScript -->
+  <script type="text/javascript" src="js/output1.js"></script>
+  <script type="text/javascript" src="js/output2.js"></script>
   <script type="text/javascript" src="js/chartdata.js"></script>
   <script type="text/javascript" src="js/chartdraw.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -71,16 +73,18 @@
             <summary>Year-to-date actual data</summary>
             <p>Exchange rates retrieved monthly from <a href="https://apilayer.com/" target="_blank">APILayer</a>. Output shows the average rate, the minimum and maximum rates for the selected year, and the dates these occured.</p>
           </details>
-          <img class="img-responsive hidden-print" src="img/analyze1pyBW.PNG" alt="year-to-date">
-          <img class="img-responsive visible-print hidden-xs hidden-sm hidden-md hidden-lg" src="img/analyze1pyWB.PNG" alt="year-to-date">
+          <div id="output1txt" class="output"></div>
+          <!-- <img class="img-responsive hidden-print" src="img/analyze1pyBW.PNG" alt="year-to-date"> -->
+          <!-- <img class="img-responsive visible-print hidden-xs hidden-sm hidden-md hidden-lg" src="img/analyze1pyWB.PNG" alt="year-to-date"> -->
         </div>
         <div class="col-xs-12 col-md-6">
           <details>
             <summary>Forecast data</summary>
             <p>Analysts' forecasts are entered monthly and used to calculate a forecast range for the last day of the selected year. Output shows the average forecast, the lower forecast, and upper forecast.</p>
           </details>
-          <img class="img-responsive hidden-print" src="img/analyze2pyBW.PNG" alt="forecast">
-          <img class="img-responsive visible-print hidden-xs hidden-sm hidden-md hidden-lg" src="img/analyze2pyWB.PNG" alt="forecast">
+          <div id="output2txt" class="output"></div>
+          <!-- <img class="img-responsive hidden-print" src="img/analyze2pyBW.PNG" alt="forecast"> -->
+          <!-- <img class="img-responsive visible-print hidden-xs hidden-sm hidden-md hidden-lg" src="img/analyze2pyWB.PNG" alt="forecast"> -->
         </div>
       </div>
 
@@ -106,6 +110,7 @@
   </footer>
 
   <!-- More JavaScript -->
+  <script type="text/javascript" src="js/outputwrite.js"></script>
   <script type="text/javascript" src="js/updatedate.js"></script>
 
 </body>
