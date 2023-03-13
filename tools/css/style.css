@@ -10,7 +10,7 @@
 /*----- Navigation bar & footer -----*/
 
 body {
-	font-family: Verdana,Helvetica,Arial,sans-serif;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
 	font-size: 10pt !important;
 	display: flex;				/*sticky footer*/
 	min-height: 100vh;
@@ -37,7 +37,7 @@ nav, footer {
 }
 
 button, .btn {
-	background-color: #f26419 !important;	/*orange KEEP*/
+	background-color: #f26419 !important;	/*orange*/
 	color: #000000;
 	font-weight: bold !important;
 	margin: 10px 30px;
@@ -45,13 +45,13 @@ button, .btn {
 
 .btn {
 	height: 30px;
-	width: 120px;
+	width: 130px;
 	padding: 5px !important;
 }
 
 .btn.active {
 	box-shadow: none;
-	background-color: #35a7ff !important;	/*blue*/
+	background-color: #0074cc !important;	/*blue*/
 	color: #ffffff !important;	/*white*/
 }
 
@@ -63,6 +63,10 @@ button, .btn {
 	background-color: #ffffff;	/*white*/
 }
 
+.nav>li>a {
+	float: right;
+}
+
 footer {
 	height: 20px;
 	margin-top: 15px;
@@ -70,7 +74,7 @@ footer {
 	padding-left: 15px;
 	font-style: italic;
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 90%;
 	color: #c1df1f;	/*pear*/
 }
 
@@ -82,7 +86,7 @@ main {
 }
 
 h1 {
-	color: #35a7ff;		/*blue*/
+	color: #0074cc;		/*blue*/
 	font-weight: bold;
 	font-size: 150% !important;
 	margin-top: 0px;
@@ -93,7 +97,7 @@ summary {
 	display: list-item;
 	font-weight: bold;
 	font-size: 110%;
-	color: #f26419;		/*mahogany*/
+	color: #c14b0b;		/*mahogany*/
 }
 
 details, .chart {
@@ -110,12 +114,12 @@ details > p {
 }
 
 details > p > a {
-	color: #f26419;		/*mahogany*/
+	color: #c14b0b;		/*mahogany*/
 	text-decoration: underline;
 }
 
 .output {
-	font-family: consolas;
+	font-family: consolas, monospace;
 	font-size: 90%;
 	background: #ededed;
 	color: #000000;
@@ -126,7 +130,14 @@ li {
 }
 
 img, .chart, .google-visualization-table {	
-	border: solid 1px #35a7ff;	/*blue*/
+	border: solid 1px #0074cc;	/*blue*/
+}
+
+.refresh {
+	font-size: 70%;
+	font-weight: normal;
+	font-style: italic;
+	color: #000000;
 }
 
 .chart {
@@ -144,7 +155,7 @@ th, td, .google-visualization-table-td.google-visualization-table-type-number {
 }
 
 th {
-	color: #f26419;		/*mahogany*/
+	color: #c14b0b;		/*mahogany*/
 }
 
 .google-visualization-table-table {	
@@ -157,11 +168,11 @@ th {
 
 @media print {
 	h1 {
-		color: #35a7ff !important;		/*blue*/
+		color: #0074cc !important;		/*blue*/
 	}
 
 	summary, th, details > p > a {
-		color: #f26419 !important;		/*mahogany*/
+		color: #c14b0b !important;		/*mahogany*/
 	}
 
 	img {
