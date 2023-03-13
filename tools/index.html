@@ -1,6 +1,6 @@
 <!---------------------------->
 <!-- My Tools - v 5.0       -->
-<!-- currency.html          -->
+<!-- index.html             -->
 <!-- last update 2023-03-13 -->
 <!---------------------------->
 
@@ -25,15 +25,6 @@
 
   <!-- JavaScript -->
   <script src="https://kit.fontawesome.com/5dc8c48ef1.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/output1.js"></script>
-  <script type="text/javascript" src="js/output2.js"></script>
-  <script type="text/javascript" src="js/chartdata.js"></script>
-  <script type="text/javascript" src="js/chartdraw.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-    google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(drawChart);
-  </script>
 
   <!-- Style Sheets -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -54,8 +45,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a class="btn" href="index.html">Home</a></li>
-            <li><a class="btn active" href="currency.html">EUR/USD</a></li>
+            <li><a class="btn active" href="index.html">Home</a></li>
+            <li><a class="btn" href="currency.html">EUR/USD</a></li>
             <li><a class="btn" href="treasuries.html">Treasuries</a></li>
             <li><a class="btn" href="wildlifegallery.html">Gallery</a></li> 
           </ul>
@@ -65,43 +56,31 @@
   </header>
 
   <main>
-    <h1>Currency Forecast: EUR/USD</h1>
-    <p  id="updatecur"></p>
+    <h1><a href="#"><i class="fa-solid fa-screwdriver-wrench fa-2x"></i></a> My Tools</h1>
+    <p>This website gathers information from the Internet that I use regularly for decision-making purposes.</p>
     
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <details>
-            <summary>Year-to-date actual data</summary>
-            <p>Exchange rates retrieved monthly from <a href="https://apilayer.com/" target="_blank">APILayer</a>. Output shows the average rate, the minimum and maximum rates for the selected year, and the dates these occured.</p>
-          </details>
-          <div id="output1txt" class="output"></div>
+          <h2><a href="currency.html"><i class="fa-solid fa-euro-sign fa-2x"></i> <i class="fa-solid fa-dollar-sign fa-2x"></i></a> Currency Tool: EUR/USD</h2>
+          <p>This tool uses a combination of actual exchange rates year-to-date and analysts' forecasts for the remainder of the year to calculate estimated average exchange rates for the EUR/USD pair for the current year.<br><br>
+          I originally created this tool for the Python for Everybody Capstone course. Since May 2022, I have been running this tool locally on my computer every month.<br><br>
+          For this portfolio, I made adjustments to the Python programs to generate output files displayed on this page and Javascript data files used to create a Google Chart graph.</p>
         </div>
         <div class="col-xs-12 col-md-6">
-          <details>
-            <summary>Forecast average data</summary>
-            <p>Analysts' forecasts are entered monthly and used to calculate a forecast range of average rates for the selected year. Output shows the average, lower , and upper forecast in the range.</p>
-          </details>
-          <div id="output2txt" class="output"></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <details>
-            <summary>Forecast graph with historical rates
-              <span class="refresh">Refresh page after resizing window.</span>
-            </summary>
-            <p>Currency Forecast Using Year-To-Date Actual Data and Analysts' Forecast Data. <br>
-            The forecast data is shown in a <a href="https://developers-dot-devsite-v2-prod.appspot.com/chart" target="_blank">Google Chart</a> graph. The blue line on the left shows the actual year-to-date data for the prior year and the selected year. The colored lines on the right show the forecast range for the remainder of the selected year.</p>
-          </details>
+          <h2><a href="treasuries.html"><i class="fa-solid fa-chart-line fa-2x"></i></a> Treasury Tool: Treasuries</h2>
+          <p>This tool presents selected data from the U.S. Treasury. Interest rates for treasury bills, notes, and bonds are shown in different Google Charts over certain periods of time.<br><br>
+          I originally created this tool as an Excel spreadsheet to use weekly.<br><br>
+         For this page, I developed a Python program to transform a csv file that I download from the U.S. Treasury website into Javascript data files that are then displayed on this page in a table and graphs.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <div id="chart_div" class="chart"></div>
+        <div class="col-xs-12 col-md-6">
+          <h2><a href="wildlifegallery.html"><i class="fa-sharp fa-solid fa-images fa-2x"></i></a> Photo Tool: Gallery</h2>
+          <p>This tool is a photo gallery of the wildlife we have encountered around our home and neighborhood.<br><br>
+          This tool was originally created for an assignment for the Advanced Styling with Responsive Design course. I have restyled this page for this portfolio.<br><br>
         </div>
-      </div>  
+      </div>
     </div>
   </main>
 
@@ -110,7 +89,6 @@
   </footer>
 
   <!-- More JavaScript -->
-  <script type="text/javascript" src="js/outputwrite.js"></script>
   <script type="text/javascript" src="js/updatedate.js"></script>
 
 </body>
