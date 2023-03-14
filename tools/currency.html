@@ -1,7 +1,7 @@
 <!---------------------------->
 <!-- My Tools - v 5.0       -->
 <!-- currency.html          -->
-<!-- last update 2023-03-13 -->
+<!-- last update 2023-03-14 -->
 <!---------------------------->
 
 <!DOCTYPE html>
@@ -25,12 +25,12 @@
 
   <!-- JavaScript -->
   <script src="https://kit.fontawesome.com/5dc8c48ef1.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/output1.js"></script>
-  <script type="text/javascript" src="js/output2.js"></script>
-  <script type="text/javascript" src="js/chartdata.js"></script>
-  <script type="text/javascript" src="js/chartdraw.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript">
+  <script src="js/output1.js"></script>
+  <script src="js/output2.js"></script>
+  <script src="js/chartdata.js"></script>
+  <script src="js/chartdraw.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
     google.load("visualization", "1", {packages:["corechart"]});
     google.setOnLoadCallback(drawChart);
   </script>
@@ -40,7 +40,7 @@
   <link rel="icon" type="image/ico" href="img/favicon.ico">
 </head>
 
-<body>
+<body onresize="location.reload()">
   <header>
     <nav class="navbar">
       <div class="container-fluid">
@@ -65,24 +65,24 @@
   </header>
 
   <main>
-    <h1>Currency Forecast: EUR/USD</h1>
-    <p  id="updatecur"></p>
+    <h1><a href="currency.html"><i class="fa-solid fa-euro-sign fa-2x"></i> <i class="fa-solid fa-dollar-sign fa-2x"></i></a>Currency Forecast: EUR/USD</h1>
+    <p  id="updatecur" class = "update"></p>
     
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-md-6">
           <details>
             <summary>Year-to-date actual data</summary>
-            <p>Exchange rates retrieved monthly from <a href="https://apilayer.com/" target="_blank">APILayer</a>. Output shows the average rate, the minimum and maximum rates for the selected year, and the dates these occured.</p>
+            <p>Actual exchange rates are retrieved monthly from <a href="https://apilayer.com/" target="_blank">APILayer</a>. Output shows the average, minimum and maximum rates for the selected year, and the dates these occurred.</p>
           </details>
-          <div id="output1txt" class="output"></div>
+          <p id="output1txt" class="output"></p>
         </div>
         <div class="col-xs-12 col-md-6">
           <details>
             <summary>Forecast average data</summary>
-            <p>Analysts' forecasts are entered monthly and used to calculate a forecast range of average rates for the selected year. Output shows the average, lower , and upper forecast in the range.</p>
+            <p>Analysts' forecasts are entered monthly for different time periods over the next 12 months. Combined with actual data year-to-date, these forecasts are used to calculate a range of average rates for the selected year. Output shows the range of averages, one calculated with the average forecasts, a second calculated with the lower forecasts, and a third calculated with the upper forecasts.</p>
           </details>
-          <div id="output2txt" class="output"></div>
+          <p id="output2txt" class="output"></p>
         </div>
       </div>
 
@@ -90,10 +90,8 @@
         <div class="col-xs-12">
           <details>
             <summary>Forecast graph with historical rates
-              <span class="refresh">Refresh page after resizing window.</span>
             </summary>
-            <p>Currency Forecast Using Year-To-Date Actual Data and Analysts' Forecast Data. <br>
-            The forecast data is shown in a <a href="https://developers-dot-devsite-v2-prod.appspot.com/chart" target="_blank">Google Chart</a> graph. The blue line on the left shows the actual year-to-date data for the prior year and the selected year. The colored lines on the right show the forecast range for the remainder of the selected year.</p>
+            <p>The forecast data is shown in a <a href="https://developers-dot-devsite-v2-prod.appspot.com/chart" target="_blank">Google Chart</a> graph. The blue line on the left shows the actual year-to-date data for the prior year and the selected year. The colored lines on the right show the forecast range for the remainder of the selected year.</p>
           </details>
         </div>
       </div>
@@ -110,8 +108,8 @@
   </footer>
 
   <!-- More JavaScript -->
-  <script type="text/javascript" src="js/outputwrite.js"></script>
-  <script type="text/javascript" src="js/updatedate.js"></script>
+  <script src="js/outputwrite.js"></script>
+  <script src="js/updatedate.js"></script>
 
 </body>
 </html>

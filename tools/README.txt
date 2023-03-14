@@ -1,22 +1,29 @@
-Version 5.0 - 2023-03-12
+Version 5.0 - 2023-03-14
 ------------------------
 
 This version includes:
 
-Currency:   JavaScript outputs
-	    Python to transform outputs into Javascript data sets
-	    Google chart with JavaScript (py4e)
+Home:		Desciption of portfolio
+		FontAwesome pictograms
 
-Treasuries: Google Table with JavaScript
-	    Google Chart with JavaScript (2)
-	    Python to transform .csv file into Javascript data sets
+Currency:   	JavaScript outputs
+	    	Python to transform outputs into Javascript data sets
+	    	Google chart with JavaScript (py4e)
 
-Gallery:    bootstrap 3
+Treasuries: 	Google Table with JavaScript
+	    	Google Chart with JavaScript (2)
+	    	Python to transform .csv file into Javascript data sets
 
-CSS:	    adjusted for Google Table
-	    adjusted font-size for xs
-	    testing again old lighter colors with different font.
+Gallery:    	Bootstrap 3
 
+CSS:	    	adjusted for Google Table
+	    	adjusted font-size for xs
+	        testing again old lighter colors with different font.
 
-Batch file to run Currency updates
-Batch file to run Treasury updates
+JS:		onresize reload() 
+		updated date
+		footer year
+		Google Charts (3 line charts and 1 table)
+
+Batch file to run Currency updates with Python programs
+Batch file to run Treasury updates with a Python program
