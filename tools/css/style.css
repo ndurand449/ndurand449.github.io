@@ -1,7 +1,7 @@
 /*----------------------------*/
 /*-- My Tools - v 5.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-13 --*/
+/*-- last update 2023-03-14 --*/
 /*----------------------------*/
 
 
@@ -100,9 +100,14 @@ p {
 	margin: 0px;
 }
 
+.update {
+	margin-bottom: 10px;
+}
+
 summary {
 	cursor: pointer;
-	display: list-item;
+	display: list-item !important;
+	list-style-position: inside;
 	font-weight: bold;
 	font-size: 110%;
 	color: #c14b0b;		/*mahogany*/
@@ -131,6 +136,12 @@ details > p > a {
 	background: #ededed;
 }
 
+.chart {
+	width: 100% !important;
+	min-height: 240px;
+	margin-bottom: 20px;
+}
+
 li {
 	list-style-type: none;
 }
@@ -139,22 +150,19 @@ img, .chart, .google-visualization-table {
 	border: solid 1px #0074cc;	/*blue*/
 }
 
-.refresh {
-	float: right;
-	font-size: 70%;
-	font-weight: normal;
-	font-style: italic;
-	color: #000000;
-}
-
-.chart {
-	width: 100% !important;
-	min-height: 240px;
-}
-
-.noborder {				/*only used in gallery page*/
+.noborder {				
 	border: none;	
 	margin-top: 15px;
+}
+
+div > .legend {
+	display: inline-block;
+	float: right;
+	margin: 0px auto;
+}
+
+.legend {
+	height: 23px;
 }
 
 th, td, .google-visualization-table-td.google-visualization-table-type-number {	
