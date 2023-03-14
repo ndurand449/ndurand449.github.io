@@ -1,7 +1,7 @@
 //----------------------------
 //-- My Tools - v 5.0       --
 //-- updatedate.js          --
-//-- last update 2023-03-12 --
+//-- last update 2023-03-14 --
 //----------------------------
 
 //-- Current year for footer for html files

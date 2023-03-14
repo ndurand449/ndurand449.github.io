@@ -1,7 +1,7 @@
 //----------------------------
 //-- My Tools - v 5.0       --
 //-- chartdrawTreas.js      --
-//-- last update 2023-03-12 --
+//-- last update 2023-03-14 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -20,7 +20,7 @@ function drawChart0() {
         vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Number of Months', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
-                gridlines: {color: '#c1df1f', count: 18}},
+                gridlines: {color: '#c1df1f', }},
         legend: {position:'bottom', textStyle: {fontSize: '10'}},
         series: {0:{lineWidth: 1}, 1:{lineWidth: 1}, 2:{lineWidth: 1}, 3:{lineWidth: 2}},
     };
@@ -34,7 +34,7 @@ txt0 = dataTreasTransposedRolling4Fri[0][4];
 len = dataTreasRolling28.length;
 d = dataTreasRolling28[len-1][0]
 y = d.getFullYear();
-document.getElementById("updatetre").innerHTML = "Updated on " + txt0 + "/" + y;
+document.getElementById("updatetre").innerHTML = "Data updated on " + txt0 + "/" + y;
 }
 
 
@@ -51,7 +51,7 @@ function drawChart1() {
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
-        legend: {position:'bottom', textStyle: {fontSize: '10'}},
+        legend: {position:'none', textStyle: {fontSize: '11'}},
         series: {0:{lineWidth: 1}, 1:{lineWidth: 1}, 2:{lineWidth: 1}, 3:{lineWidth: 2}, 4:{lineWidth: 2}, 
                  5:{lineWidth: 2}, 6:{lineWidth: 2}, 7:{lineWidth: 2}, 8:{lineWidth: 2}, 9:{lineWidth: 1},
                 10:{lineWidth: 1}, 11:{lineWidth: 1, lineDashStyle: [1, 1]}, 12:{lineWidth: 1, lineDashStyle: [1, 1]}},

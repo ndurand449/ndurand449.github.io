@@ -1,7 +1,7 @@
 //----------------------------
 //-- My Tools - v 5.0       --
 //-- chartdraw.js           --
-//-- last update 2023-03-12 --
+//-- last update 2023-03-14 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -29,7 +29,7 @@ function drawChart() {
 
 //-- Data extraction from chartdata.js to build: "Updated on date" - currency.html
 txt = chartdata[0][0];
-document.getElementById("updatecur").innerHTML = "Updated on " + txt.slice(30,32) + "/" + txt.slice(33,35) + "/" + txt.slice(25,29);
+document.getElementById("updatecur").innerHTML = "Data updated on " + txt.slice(30,32) + "/" + txt.slice(33,35) + "/" + txt.slice(25,29);
 }
 
 
