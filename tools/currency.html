@@ -40,7 +40,8 @@
   <link rel="icon" type="image/ico" href="img/favicon.ico">
 </head>
 
-<body onresize="location.reload()">
+<!-- <body onresize="location.reload()"> -->
+<body>
   <header>
     <nav class="navbar">
       <div class="container-fluid">
@@ -50,7 +51,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><i class="fa-solid fa-screwdriver-wrench"></i> My Tools</a>
+          <a class="navbar-brand" href="#"  aria-label="tools"><i class="fa-solid fa-screwdriver-wrench"></i> My Tools</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -65,7 +66,7 @@
   </header>
 
   <main>
-    <h1><a href="currency.html"><i class="fa-solid fa-euro-sign fa-2x"></i> <i class="fa-solid fa-dollar-sign fa-2x"></i></a>Currency Forecast: EUR/USD</h1>
+    <h1><a href="currency.html" aria-label="currencies"><i class="fa-solid fa-euro-sign fa-2x"></i> <i class="fa-solid fa-dollar-sign fa-2x"></i></a>Currency Forecast: EUR/USD</h1>
     <p  id="updatecur" class = "update"></p>
     
     <div class="container-fluid">
@@ -85,7 +86,6 @@
           <p id="output2txt" class="output"></p>
         </div>
       </div>
-
       <div class="row">
         <div class="col-xs-12">
           <details>
@@ -93,10 +93,7 @@
             </summary>
             <p>The forecast data is shown in a <a href="https://developers-dot-devsite-v2-prod.appspot.com/chart" target="_blank">Google Chart</a> graph. The blue line on the left shows the actual year-to-date data for the prior year and the selected year. The colored lines on the right show the forecast range for the remainder of the selected year.</p>
           </details>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
+          <p class="refresh">Refresh page after resizing window.</p>
           <div id="chart_div" class="chart"></div>
         </div>
       </div>  
