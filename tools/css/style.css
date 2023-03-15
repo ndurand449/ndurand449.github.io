@@ -1,7 +1,7 @@
 /*----------------------------*/
 /*-- My Tools - v 5.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-14 --*/
+/*-- last update 2023-03-15 --*/
 /*----------------------------*/
 
 
@@ -187,11 +187,18 @@ h1 > a > i, h2 > a > i, th {
 /*----- Print view -----*/
 
 @media print {
-	h1 {
+	body {
+		font-family: Verdana, Helvetica, Arial, sans-serif;
+		font-size: 10pt !important;
+		display: block;				/* remove sticky footer*/
+		min-height: 50vh;
+	}
+
+	h1, h2 {
 		color: #0074cc !important;		/*blue*/
 	}
 
-	summary, th, details > p > a {
+	h1 > a, h2 > a, summary, th, details > p > a {
 		color: #c14b0b !important;		/*mahogany*/
 	}
 
