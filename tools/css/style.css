@@ -136,23 +136,23 @@ details > p > a {
 	background: #ededed;
 }
 
-.chart {
-	width: 100% !important;
-	min-height: 240px;
-	margin-bottom: 20px;
-}
-
 li {
 	list-style-type: none;
 }
 
-img, .chart, .google-visualization-table {	
+.refresh {
+	text-align: right;
+	font-style: italic;
+}
+
+.chart, .google-visualization-table {	
 	border: solid 1px #0074cc;	/*blue*/
 }
 
-.noborder {				
-	border: none;	
-	margin-top: 15px;
+.chart {
+	width: 100% !important;
+	min-height: 240px;
+	margin-bottom: 20px;
 }
 
 div > .legend {
@@ -176,6 +176,11 @@ h1 > a > i, h2 > a > i, th {
 .google-visualization-table-table {	
 	font-family: Verdana,Helvetica,Arial,sans-serif !important;
 	font-size: 80% !important;
+}
+
+.noborder {				
+	border: none;	
+	margin-top: 15px;
 }
 
 
