@@ -1,7 +1,7 @@
 /*----------------------------*/
-/*-- My Tools - v 5.0       --*/
+/*-- My Tools - v 6.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-15 --*/
+/*-- last update 2023-03-17 --*/
 /*----------------------------*/
 
 
@@ -134,6 +134,12 @@ details > p > a {
 	font-family: consolas, monospace;
 	font-size: 90%;
 	background: #ededed;
+}
+
+
+
+ul {
+	padding-inline-start: 20px;
 }
 
 li {
