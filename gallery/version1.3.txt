@@ -1,0 +1,9 @@
+version 1.3 - 2023-03-18
+------------------------
+
+Files: gallery.html, flowers.html, wildlife.html
+
+1. Added pictures to both galleries
+2. Forced into new row at changed format
+3. Menu and Head, changed to relative links
+4. Moved favicon to \img
