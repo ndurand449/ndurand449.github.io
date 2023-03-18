@@ -8,6 +8,10 @@
 //-- Original code - py4e - Capstone project
 
 function drawTable() {
+    var cssClassNames = {
+        'headerRow' : 'headerRow',
+    }
+
     var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling5);
 
     var formatter = new google.visualization.NumberFormat({fractionDigits: 2});

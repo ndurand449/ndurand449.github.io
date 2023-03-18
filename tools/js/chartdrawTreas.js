@@ -21,7 +21,7 @@ function drawChart0() {
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Number of Months', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f', }},
-        legend: {position:'bottom', textStyle: {fontSize: '9'}},
+        legend: {position:'bottom', textStyle: {fontSize: '8'}},
         series: {0:{lineWidth: 1}, 1:{lineWidth: 1}, 2:{lineWidth: 1}, 3:{lineWidth: 2}},
     };
 
