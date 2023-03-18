@@ -1,17 +1,13 @@
 //----------------------------
 //-- My Tools - v 6.0       --
 //-- tabledrawTreas.js      --
-//-- last update 2023-03-15 --
+//-- last update 2023-03-18 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
 //-- Original code - py4e - Capstone project
 
 function drawTable() {
-    var cssClassNames = {
-        'headerRow' : 'headerRow',
-    }
-
     var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling5);
 
     var formatter = new google.visualization.NumberFormat({fractionDigits: 2});
