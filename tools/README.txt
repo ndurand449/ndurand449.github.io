@@ -17,8 +17,9 @@ Gallery:    	added pictures
 		different rows for tall vs wide pictures
 
 CSS:	    	output indent
+		decreased font in table header
 
 JS:		Treasuries table, first column head
-		Legends
+		legends
 
 BAT:
