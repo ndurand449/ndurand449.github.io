@@ -1,7 +1,7 @@
 //----------------------------
-//-- My Tools - v 5.0       --
+//-- My Tools - v 6.0       --
 //-- chartdrawTreas.js      --
-//-- last update 2023-03-14 --
+//-- last update 2023-03-18 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -21,7 +21,7 @@ function drawChart0() {
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Number of Months', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f', }},
-        legend: {position:'bottom', textStyle: {fontSize: '10'}},
+        legend: {position:'bottom', textStyle: {fontSize: '9'}},
         series: {0:{lineWidth: 1}, 1:{lineWidth: 1}, 2:{lineWidth: 1}, 3:{lineWidth: 2}},
     };
 
