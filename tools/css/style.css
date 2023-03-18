@@ -1,7 +1,7 @@
 /*----------------------------*/
 /*-- My Tools - v 6.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-17 --*/
+/*-- last update 2023-03-18 --*/
 /*----------------------------*/
 
 
@@ -136,8 +136,6 @@ details > p > a {
 	background: #ededed;
 }
 
-
-
 ul {
 	padding-inline-start: 20px;
 }
@@ -149,6 +147,7 @@ li {
 .refresh {
 	text-align: right;
 	font-style: italic;
+	font-size: 95%;
 }
 
 .chart, .google-visualization-table {	
@@ -183,6 +182,11 @@ h1 > a > i, h2 > a > i, th {
 	font-family: Verdana,Helvetica,Arial,sans-serif !important;
 	font-size: 85% !important;
 }
+
+.headerRaw {
+	font-size: 80%;
+}
+
 
 .noborder {				
 	border: none;	
