@@ -1,4 +1,4 @@
-chartdata = [ ['Pair = EUR-USD --- as of 2023-03-18 ---','Act.','Hi','Lo','Avg'],
+chartdata = [ ['Pair = EUR-USD --- as of 2023-03-18 ---','Act','Hi','Lo','Avg'],
 [new Date(2022,0,01),1.1368,null,null,null],
 [new Date(2022,0,02),1.13682,null,null,null],
 [new Date(2022,0,03),1.13276,null,null,null],
