@@ -160,6 +160,10 @@ li {
 	margin-bottom: 20px;
 }
 
+#chart_div_Treas1 {
+	margin-bottom: 0px;
+}
+
 div > .legend {
 	display: inline-block;
 	float: right;
