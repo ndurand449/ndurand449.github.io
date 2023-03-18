@@ -63,10 +63,6 @@ button, .btn {
 	background-color: #ffffff;	/*white*/
 }
 
-.nav>li>a {
-/*	float: right;*/
-}
-
 footer {
 	margin-top: 10px;
 	padding-left: 4px;
@@ -94,6 +90,10 @@ h2 {
 	color: #0074cc;		/*blue*/
 	font-weight: bold;
 	font-size: 130% !important;
+}
+
+h1 > a > i, h2 > a > i, th {
+	color: #c14b0b;		/*mahogany*/
 }
 
 p {
@@ -160,6 +160,15 @@ li {
 	margin-bottom: 20px;
 }
 
+th, td, .google-visualization-table-td.google-visualization-table-type-number {	
+	text-align: center !important;
+}
+
+.google-visualization-table-table {	
+	font-family: Verdana,Helvetica,Arial,sans-serif !important;
+	font-size: 85% !important;
+}
+
 #chart_div_Treas1 {
 	margin-bottom: 0px;
 }
@@ -172,23 +181,6 @@ div > .legend {
 
 .legend {
 	height: 23px;
-}
-
-th, td, .google-visualization-table-td.google-visualization-table-type-number {	
-	text-align: center !important;
-}
-
-h1 > a > i, h2 > a > i, th {
-	color: #c14b0b;		/*mahogany*/
-}
-
-.google-visualization-table-table {	
-	font-family: Verdana,Helvetica,Arial,sans-serif !important;
-	font-size: 85% !important;
-}
-
-th {			
-	font-size: 95% !important;
 }
 
 .noborder {				
