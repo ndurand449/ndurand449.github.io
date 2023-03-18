@@ -1,29 +1,24 @@
-Version 5.0 - 2023-03-14
+Version 6.0 - 2023-03-18
 ------------------------
 
 This version includes:
 
-Home:		Desciption of portfolio
-		FontAwesome pictograms
+Home:		
 
-Currency:   	JavaScript outputs
-	    	Python to transform outputs into Javascript data sets
-	    	Google chart with JavaScript (py4e)
+Currency:   	changed indent in outputs (to accomodate smaller phones)
+		changed legend font
 
-Treasuries: 	Google Table with JavaScript
-	    	Google Chart with JavaScript (2)
-	    	Python to transform .csv file into Javascript data sets
+Treasuries:	formatted data columns in table (2 decimals)
+		changed title and 1st column header
+		corrected typos 	
+		decreased legend font - graph 1
 
-Gallery:    	Bootstrap 3
+Gallery:    	added pictures
+		different rows for tall vs wide pictures
 
-CSS:	    	adjusted for Google Table
-	    	adjusted font-size for xs
-	        testing again old lighter colors with different font.
+CSS:	    	output indent
 
-JS:		onresize reload() 
-		updated date
-		footer year
-		Google Charts (3 line charts and 1 table)
+JS:		Treasuries table, first column head
+		Legends
 
-Batch file to run Currency updates with Python programs
-Batch file to run Treasury updates with a Python program
+BAT:
