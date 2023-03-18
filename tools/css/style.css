@@ -183,10 +183,9 @@ h1 > a > i, h2 > a > i, th {
 	font-size: 85% !important;
 }
 
-.headerRaw {
-	font-size: 80%;
+th {			
+	font-size: 95% !important;
 }
-
 
 .noborder {				
 	border: none;	
