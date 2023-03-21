@@ -8,4 +8,4 @@
 
 var d = new Date();
 copyyear = d.getFullYear();
-document.getElementById("copy").innerHTML = "&copy; " + copyyear + "- ND - version 6.0";
+document.getElementById("copy").innerHTML = "&copy; " + copyyear + " - ND - version 6.0";
