@@ -1,11 +1,15 @@
 //----------------------------
-//-- My Tools - v 6.0       --
+//-- My Tools - v 7.0       --
 //-- chartdrawTreas.js      --
-//-- last update 2023-03-18 --
+//-- last update 2023-03-30 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
 //-- Original code - py4e - Capstone project
+
+
+//-- #1: Treasury Yield Curve
+//---------------------------
 
 function drawChart0() {
     var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling4Fri);
@@ -38,13 +42,16 @@ document.getElementById("updatetre").innerHTML = "Data updated on " + txt0 + "/"
 }
 
 
+//-- #3: Treasury Par Yield Curve (rolling 28 days)
+//-------------------------------------------------
+
 function drawChart1() {
     var data = google.visualization.arrayToDataTable(dataTreasRolling28);
 
     var options = {
         fontSize: '11',
         fontName: 'Verdana',
-        title: "Treasury Par Yield Curve",
+        title: 'Treasury Par Yield Curve',
         titleTextStyle: {color:'#7d4600', fontSize: '12'},
         chartArea: {left:'12%', top:'12%', width:'85%', height:'70%'},
         vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
@@ -60,3 +67,115 @@ function drawChart1() {
     var chart = new google.visualization.LineChart(document.getElementById('chart_div_Treas1'));
     chart.draw(data, options);
 }
+
+
+//-- #4: Treasury Par Yield Curve YTD
+//-----------------------------------
+
+function show(element) {
+    document.getElementById("treasAll").value = "off";
+    document.getElementById("treasBills").value = "off";
+    document.getElementById("treasNotes").value = "off";
+    document.getElementById("treasBonds").value = "off";
+    document.getElementById("treasSelect").value = "off";
+    document.getElementById(element.id).value = "on";
+    
+    if(document.getElementById("treasSelect").value == "on"){
+      document.getElementById("selection").style.display = "block";
+    }
+    else
+      document.getElementById("selection").style.display = "none";
+}
+
+
+function myPick() {
+    lW0 = 0; lW1 = 0; lW2 = 0; lW3 = 0; lW4 = 0; lW5 = 0; lW6 = 0; lW7 = 0; lW8 = 0; lW9 = 0; lW10 = 0; lW11 = 0; lW12 = 0;
+    tF0 = false; tF1 = false; tF2 = false; tF3 = false; tF4 = false; tF5 = false; tF6 = false; tF7 = false; tF8 = false; 
+    tF9 = false; tF10 = false; tF11 = false; tF12 = false;
+
+    if(document.getElementById("treasAll").value == "on") {
+        lW0 = 1; lW1 = 1; lW2 = 1; lW3 = 2; lW4 = 2; lW5 = 2; lW6 = 2; lW7 = 2; lW8 = 2; lW9 = 1; lW10 = 1; lW11 = 1;
+        lW12 = 1; tF0 = true; tF1 = true; tF2 = true; tF3 = true; tF4 = true; tF5 = true; tF6 = true; tF7 = true; 
+        tF8 = true; tF9 = true; tF10 = true; tF11 = true; tF12 = true;
+    } else if(document.getElementById("treasBills").value == "on") {
+        lW0 = 1; lW1 = 1; lW2 = 1; lW3 = 2; lW4 = 2; lW5 = 2; 
+        tF0 = true; tF1 = true; tF2 = true; tF3 = true; tF4 = true; tF5 = true;
+    } else if(document.getElementById("treasNotes").value == "on") {
+        lW6 = 2; lW7 = 2; lW8 = 2; lW9 = 1; lW10 = 1;
+        tF6 = true; tF7 = true; tF8 = true; tF9 = true; tF10 = true;
+    } else if(document.getElementById("treasBonds").value == "on") {
+        lW11 = 1; lW12 = 1;
+        tF11 = true; tF12 = true;
+    } else {
+        console.log("DONE! Now to custom");
+    }
+
+    document.getElementById("treasAll").checked;
+    drawChart2();
+}
+
+
+function drawChart2() {
+    var data = google.visualization.arrayToDataTable(dataTreasFull);
+
+    var options = {
+        fontSize: '11',
+        fontName: 'Verdana',
+        title: 'Treasury Par Yield Curve',
+        titleTextStyle: {color:'#7d4600', fontSize: '12'},
+        chartArea: {left:'12%', top:'12%', width:'85%', height:'70%'},
+        vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
+                gridlines: {color: '#c1df1f'}},
+        hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
+                gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
+        legend: {position:'bottom', textStyle: {fontSize: '11'}},
+        series: {0:{lineWidth: lW0, visibleInLegend: tF0}, 1:{lineWidth: lW1, visibleInLegend: tF1}, 
+                 2:{lineWidth: lW2, visibleInLegend: tF2}, 3:{lineWidth: lW3, visibleInLegend: tF3}, 
+                 4:{lineWidth: lW4, visibleInLegend: tF4}, 5:{lineWidth: lW5, visibleInLegend: tF5}, 
+                 6:{lineWidth: lW6, visibleInLegend: tF6}, 7:{lineWidth: lW7, visibleInLegend: tF7}, 
+                 8:{lineWidth: lW8, visibleInLegend: tF8}, 9:{lineWidth: lW9, visibleInLegend: tF9},
+                10:{lineWidth: lW10, visibleInLegend: tF10}, 
+                11:{lineWidth: lW11, lineDashStyle: [1, 1], visibleInLegend: tF11}, 
+                12:{lineWidth: lW12, lineDashStyle: [1, 1], visibleInLegend: tF12}},
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div_Treas2'));
+    chart.draw(data, options);
+}
+
+// function pick() {
+
+// }
+
+// All
+// lW0 = 1; lW1 = 1; lW2 = 1; lW3 = 2; lW4 = 2; lW5 = 2; lW6 = 2; lW7 = 2; lW8 = 2; lW9 = 1; lW10 = 1; lW11 = 1; lW12 = 1;
+
+// Bills
+// lW0 = 1; lW1 = 1; lW2 = 1; lW3 = 2; lW4 = 2; lW5 = 2; lW6 = 0; lW7 = 0; lW8 = 0; lW9 = 0; lW10 = 0; lW11 = 0; lW12 = 0;
+
+// Notes
+// lW0 = 0; lW1 = 0; lW2 = 0; lW3 = 0; lW4 = 0; lW5 = 0; lW6 = 2; lW7 = 2; lW8 = 2; lW9 = 1; lW10 = 1; lW11 = 0; lW12 = 0;
+
+// Bonds
+// lW0 = 0; lW1 = 0; lW2 = 0; lW3 = 0; lW4 = 0; lW5 = 0; lW6 = 0; lW7 = 0; lW8 = 0; lW9 = 0; lW10 = 0; lW11 = 1; lW12 = 1;
+
+
+// function select(){
+//     if(document.getElementById("treasSelect").checked){
+//         console.log("checked")
+//     }
+//     else
+//         console.log("not checked")
+   
+        // console.log(document.getElementById("treasSelect").value)
+
+    // if(document.getElementById("treasSelect").checked){
+    //     document.getElementById("selection").style.display = "inline";
+    //     // document.getElementById("nickname").style.display = "inline";
+        // document.getElementById("nickname").setAttribute("required",true);
+    // }
+    // else
+    //     document.getElementById("selection").style.display = "none";
+    //     // document.getElementById("nickname").style.display = "none";
+        // document.getElementById("nickname").removeAttribute("required");    
+// }
