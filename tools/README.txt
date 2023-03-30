@@ -1,25 +1,20 @@
-Version 6.0 - 2023-03-18
+Version 7.0 - 2023-03-30
 ------------------------
 
 This version includes:
 
-Home:		
+Home:		Treasurys, JavaScript
 
-Currency:   	changed indent in outputs (to accomodate smaller phones)
-		changed legend font
+Currency:   	Treasurys, typos
 
-Treasuries:	formatted data columns in table (2 decimals)
-		changed title and 1st column header
-		corrected typos 	
-		decreased legend font - graph 1
+Treasuries:	Treasurys 
+		legend margin graph 2
+		created graph 3 with JavaScript to select series
 
-Gallery:    	added pictures
-		different rows for tall vs wide pictures
+Gallery:    	Treasurys
 
-CSS:	    	output indent
-		decreased font in table header
+CSS:	    	
 
-JS:		Treasuries table, first column head
-		legends
+JS:		Treasurys graph 3
 
 BAT:

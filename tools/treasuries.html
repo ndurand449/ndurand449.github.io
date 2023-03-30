@@ -1,7 +1,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- My Tools - v 6.0       -->
-<!-- treasuries.html        -->
-<!-- last update 2023-03-18 -->
+<!-- My Tools - v 7.0       -->
+<!-- treasuries3.html       -->
+<!-- last update 2023-03-30 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!DOCTYPE html>
@@ -39,11 +39,13 @@
   <script src="https://www.google.com/jsapi"></script>
   <script src="js/dataTreasTransposedRolling4Fri.js"></script>
   <script src="js/dataTreasRolling28.js"></script>
+  <script src="js/dataTreasFull.js"></script>
   <script src="js/chartdrawTreas.js"></script>
   <script>
     google.load("visualization", 'current', {packages:["corechart"]});
     google.setOnLoadCallback(drawChart0);
     google.setOnLoadCallback(drawChart1);
+    google.setOnLoadCallback(drawChart2);
   </script>
 
   <!-- Style Sheets -->
@@ -67,7 +69,7 @@
           <ul class="nav navbar-nav">
             <li><a class="btn" href="index.html">Home</a></li>
             <li><a class="btn" href="currency.html">EUR/USD</a></li>
-            <li><a class="btn active" href="treasuries.html">Treasuries</a></li>
+            <li><a class="btn active" href="treasuries.html">Treasurys</a></li>
             <li><a class="btn" href="wildlifegallery.html">Gallery</a></li> 
           </ul>
         </div>
@@ -87,32 +89,85 @@
             <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the yield curve for the past 4 weeks.</p>
           </details>
           <p class="refresh">Refresh page after resizing window.</p>
-          <div id="chart_div_Treas0" class="chart">
-          </div>
+          <div id="chart_div_Treas0" class="chart"></div>
         </div>
         <div class="col-xs-12 col-md-6">
           <details>
             <summary>Latest Treasury par yield curve rates (%), rolling 6 business days</summary>
             <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This table shows the rates for the last 6 business days for Treasury bills, notes, and bonds.</p>
           </details>
-          <div id="table_div_Treas" class="table">
-          </div>
+          <div id="table_div_Treas" class="table"></div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-xs-12">
           <details>
             <summary>Par yield curve, rolling 28 days</summary>
-            <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows the historical daily rates for the past 4 weeks for Treasury bills, notes, and bonds.</p>
+            <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows historical daily rates for the past 4 weeks for Treasury bills, notes, and bonds.</p>
           </details>
+          <div id="chart_div_Treas1" class="chart"></div>
+          <img class="noborder legend" src="img/legend4.PNG" alt="legend4">
+          <img class="noborder legend" src="img/legend3.PNG" alt="legend3">
+          <img class="noborder legend" src="img/legend2.PNG" alt="legend2">
+          <img class="noborder legend" src="img/legend1.PNG" alt="legend1">
         </div>
       </div>
-      <div id="chart_div_Treas1" class="chart">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <details>
+            <summary>Par yield curve, year-to-date</summary>
+            <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This graph shows historical daily rates since the beginning of the year for the chosen Treasury bills, notes, and bonds.</p>
+          </details>
+          <form>
+            <p class="refresh">
+              <input type="radio" id="treasAll" name="series" onclick="show(this)">
+              <label for="treasAll">All Treasurys</label>
+              <input type="radio" id="treasBills" name="series" onclick="show(this)">
+              <label for="treasBills">Bills</label>
+              <input type="radio" id="treasNotes" name="series" onclick="show(this)">
+              <label for="treasNotes">Notes</label>
+              <input type="radio" id="treasBonds" name="series" onclick="show(this)">
+              <label for="treasBonds">Bonds</label>
+              <input type="radio" id="treasSelect" name="series" onclick="show(this)">
+              <label for="treasSelect">Custom</label>
+              <a class="btn OKbtn" href="#chart_div_Treas2" onclick="myPick()">OK</a><br>
+              <!-- <button class="btn OKbtn" onclick="myPick()">OK</button><br> -->
+
+              <p id="selection" class="refresh">Select:
+                <input type="checkbox" id="m1" name="pick" value="m1">
+                <label for="m1">1 Mo</label>
+                <input type="checkbox" id="m2" name="pick" value="m2">
+                <label for="m2">2 Mo</label>
+                <input type="checkbox" id="m3" name="pick" value="m3">
+                <label for="m3">3 Mo</label>
+                <input type="checkbox" id="m4" name="pick" value="m4">
+                <label for="m4">4 Mo</label>
+                <input type="checkbox" id="m6" name="pick" value="m6">
+                <label for="m6">6 Mo</label>
+                <input type="checkbox" id="y1" name="pick" value="y1">
+                <label for="y1">1 Yr</label>
+                <input type="checkbox" id="y2" name="pick" value="y2">
+                <label for="y2">2 Yr</label>
+                <input type="checkbox" id="y3" name="pick" value="y3">
+                <label for="y3">3 Yr</label>
+                <input type="checkbox" id="y5" name="pick" value="y5">
+                <label for="y5">5 Yr</label>
+                <input type="checkbox" id="y7" name="pick" value="y7">
+                <label for="y7">7 Yr</label>
+                <input type="checkbox" id="y10" name="pick" value="y10">
+                <label for="y10">10 Yr</label>
+                <input type="checkbox" id="y20" name="pick" value="y20">
+                <label for="y20">20 Yr</label>
+                <input type="checkbox" id="y30" name="pick" value="y30">
+                <label for="y30">30 Yr</label><br>
+              </p>
+            </p>
+          </form>
+          <div id="chart_div_Treas2" class="chart"></div>
+        </div>
       </div>
-      <img class="noborder legend" src="img/legend4.PNG" alt="legend4">
-      <img class="noborder legend" src="img/legend3.PNG" alt="legend3">
-      <img class="noborder legend" src="img/legend2.PNG" alt="legend2">
-      <img class="noborder legend" src="img/legend1.PNG" alt="legend1">
     </div>
   </main>
 
@@ -122,6 +177,24 @@
 
   <!-- More JavaScript -->
   <script src="js/updatedate.js"></script>
+
+
+<!-- <script type="text/javascript">
+function myPick() {
+    console.log("treasAll: " + document.getElementById("treasAll").value);
+    console.log("treasBills: " + document.getElementById("treasBills").value);
+    console.log("treasNotes: " + document.getElementById("treasNotes").value);
+    console.log("treasBonds: " + document.getElementById("treasBonds").value);
+
+  // if(document.getElementById("treasAll").value == "on") {
+  //   console.log("treasAll");
+  // } else if(document.getElementById("treasBills").value == "on") {
+  //   console.log("treasBills");
+  // }
+}
+
+
+</script> -->
 
 </body>
 </html>
