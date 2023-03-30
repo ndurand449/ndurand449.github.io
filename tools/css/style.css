@@ -1,7 +1,7 @@
 /*----------------------------*/
-/*-- My Tools - v 6.0       --*/
+/*-- My Tools - v 7.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-18 --*/
+/*-- last update 2023-03-29 --*/
 /*----------------------------*/
 
 
@@ -38,7 +38,7 @@ nav, footer {
 
 button, .btn {
 	background-color: #f26419 !important;	/*orange*/
-	color: #000000;
+	color: #ffffff;	/*white*/
 	font-weight: bold !important;
 	margin: 10px 20px;
 }
@@ -51,12 +51,12 @@ button, .btn {
 
 .btn.active {
 	box-shadow: none;
-	background-color: #0074cc !important;	/*blue*/
+	background-color: #35a7ff !important;	/*blue*/
 	color: #ffffff !important;	/*white*/
 }
 
 .btn:hover {
-	color: #ffffff;	/*white*/
+	color: #000000;	/*black*/
 }
 
 .icon-bar {
@@ -155,7 +155,7 @@ li {
 }
 
 .chart {
-	width: 100% !important;
+/*	width: 100% !important;*/
 	min-height: 240px;
 	margin-bottom: 20px;
 }
@@ -183,9 +183,31 @@ div > .legend {
 	height: 23px;
 }
 
+.legend:last-of-type {
+	margin-bottom: 15px !important;
+}
+
 .noborder {				
 	border: none;	
 	margin-top: 15px;
+}
+
+label {
+	font-weight: 100;
+	padding-right: 10px;
+	text-align: left;
+}
+
+.OKbtn {
+	font-style: normal;
+	width: 40px;
+	height: 25px;
+	padding: 0px !important;
+	margin: 0px 10px 5px;
+}
+
+#selection {
+	display: none;
 }
 
 
