@@ -87,7 +87,6 @@ function show(element) {
       document.getElementById("selection").style.display = "none";
 }
 
-
 function myPick() {
     lW0 = 0; lW1 = 0; lW2 = 0; lW3 = 0; lW4 = 0; lW5 = 0; lW6 = 0; lW7 = 0; lW8 = 0; lW9 = 0; lW10 = 0; lW11 = 0; lW12 = 0;
     tF0 = false; tF1 = false; tF2 = false; tF3 = false; tF4 = false; tF5 = false; tF6 = false; tF7 = false; tF8 = false; 
@@ -107,9 +106,21 @@ function myPick() {
         lW11 = 1; lW12 = 1;
         tF11 = true; tF12 = true;
     } else {
-        console.log("DONE! Now to custom");
+        if(document.getElementById("m1").checked) {lW0 = 1; tF0 = true;}
+        if(document.getElementById("m2").checked) {lW1 = 1; tF1 = true;}
+        if(document.getElementById("m3").checked) {lW2 = 1; tF2 = true;}
+        if(document.getElementById("m4").checked) {lW3 = 2; tF3 = true;}
+        if(document.getElementById("m6").checked) {lW4 = 2; tF4 = true;}
+        if(document.getElementById("y1").checked) {lW5 = 2; tF5 = true;}
+        if(document.getElementById("y2").checked) {lW6 = 2; tF6 = true;}
+        if(document.getElementById("y3").checked) {lW7 = 2; tF7 = true;}
+        if(document.getElementById("y5").checked) {lW8 = 2; tF8 = true;}
+        if(document.getElementById("y7").checked) {lW9 = 1; tF9 = true;}
+        if(document.getElementById("y10").checked) {lW10 = 1; tF10 = true;}
+        if(document.getElementById("y20").checked) {lW11 = 1; tF11 = true;}
+        if(document.getElementById("y20").checked) {lW12 = 1; tF12 = true;}
     }
-
+    
     document.getElementById("treasAll").checked;
     drawChart2();
 }
@@ -118,64 +129,31 @@ function myPick() {
 function drawChart2() {
     var data = google.visualization.arrayToDataTable(dataTreasFull);
 
-    var options = {
-        fontSize: '11',
-        fontName: 'Verdana',
-        title: 'Treasury Par Yield Curve',
-        titleTextStyle: {color:'#7d4600', fontSize: '12'},
-        chartArea: {left:'12%', top:'12%', width:'85%', height:'70%'},
-        vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
-                gridlines: {color: '#c1df1f'}},
-        hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
-                gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
-        legend: {position:'bottom', textStyle: {fontSize: '11'}},
-        series: {0:{lineWidth: lW0, visibleInLegend: tF0}, 1:{lineWidth: lW1, visibleInLegend: tF1}, 
-                 2:{lineWidth: lW2, visibleInLegend: tF2}, 3:{lineWidth: lW3, visibleInLegend: tF3}, 
-                 4:{lineWidth: lW4, visibleInLegend: tF4}, 5:{lineWidth: lW5, visibleInLegend: tF5}, 
-                 6:{lineWidth: lW6, visibleInLegend: tF6}, 7:{lineWidth: lW7, visibleInLegend: tF7}, 
-                 8:{lineWidth: lW8, visibleInLegend: tF8}, 9:{lineWidth: lW9, visibleInLegend: tF9},
-                10:{lineWidth: lW10, visibleInLegend: tF10}, 
-                11:{lineWidth: lW11, lineDashStyle: [1, 1], visibleInLegend: tF11}, 
-                12:{lineWidth: lW12, lineDashStyle: [1, 1], visibleInLegend: tF12}},
-    };
-
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div_Treas2'));
-    chart.draw(data, options);
+    try {
+        var options = {
+            fontSize: '11',
+            fontName: 'Verdana',
+            title: 'Treasury Par Yield Curve',
+            titleTextStyle: {color:'#7d4600', fontSize: '12'},
+            chartArea: {left:'12%', top:'12%', width:'85%', height:'70%'},
+            vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
+                    gridlines: {color: '#c1df1f'}},
+            hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
+                    gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
+            legend: {position:'bottom', textStyle: {fontSize: '11'}},
+            series: {0:{lineWidth: lW0, visibleInLegend: tF0}, 1:{lineWidth: lW1, visibleInLegend: tF1}, 
+                     2:{lineWidth: lW2, visibleInLegend: tF2}, 3:{lineWidth: lW3, visibleInLegend: tF3}, 
+                     4:{lineWidth: lW4, visibleInLegend: tF4}, 5:{lineWidth: lW5, visibleInLegend: tF5}, 
+                     6:{lineWidth: lW6, visibleInLegend: tF6}, 7:{lineWidth: lW7, visibleInLegend: tF7}, 
+                     8:{lineWidth: lW8, visibleInLegend: tF8}, 9:{lineWidth: lW9, visibleInLegend: tF9},
+                    10:{lineWidth: lW10, visibleInLegend: tF10}, 
+                    11:{lineWidth: lW11, lineDashStyle: [1, 1], visibleInLegend: tF11}, 
+                    12:{lineWidth: lW12, lineDashStyle: [1, 1], visibleInLegend: tF12}},
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div_Treas2'));
+        chart.draw(data, options);
+    }
+    catch(err) {
+        document.getElementById("chart_div_Treas2").innerHTML = "Please choose one of the option above and click OK.";
+    }
 }
-
-// function pick() {
-
-// }
-
-// All
-// lW0 = 1; lW1 = 1; lW2 = 1; lW3 = 2; lW4 = 2; lW5 = 2; lW6 = 2; lW7 = 2; lW8 = 2; lW9 = 1; lW10 = 1; lW11 = 1; lW12 = 1;
-
-// Bills
-// lW0 = 1; lW1 = 1; lW2 = 1; lW3 = 2; lW4 = 2; lW5 = 2; lW6 = 0; lW7 = 0; lW8 = 0; lW9 = 0; lW10 = 0; lW11 = 0; lW12 = 0;
-
-// Notes
-// lW0 = 0; lW1 = 0; lW2 = 0; lW3 = 0; lW4 = 0; lW5 = 0; lW6 = 2; lW7 = 2; lW8 = 2; lW9 = 1; lW10 = 1; lW11 = 0; lW12 = 0;
-
-// Bonds
-// lW0 = 0; lW1 = 0; lW2 = 0; lW3 = 0; lW4 = 0; lW5 = 0; lW6 = 0; lW7 = 0; lW8 = 0; lW9 = 0; lW10 = 0; lW11 = 1; lW12 = 1;
-
-
-// function select(){
-//     if(document.getElementById("treasSelect").checked){
-//         console.log("checked")
-//     }
-//     else
-//         console.log("not checked")
-   
-        // console.log(document.getElementById("treasSelect").value)
-
-    // if(document.getElementById("treasSelect").checked){
-    //     document.getElementById("selection").style.display = "inline";
-    //     // document.getElementById("nickname").style.display = "inline";
-        // document.getElementById("nickname").setAttribute("required",true);
-    // }
-    // else
-    //     document.getElementById("selection").style.display = "none";
-    //     // document.getElementById("nickname").style.display = "none";
-        // document.getElementById("nickname").removeAttribute("required");    
-// }
