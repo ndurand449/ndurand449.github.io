@@ -1,7 +1,7 @@
 /*----------------------------*/
 /*-- My Tools - v 7.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-29 --*/
+/*-- last update 2023-03-31 --*/
 /*----------------------------*/
 
 
@@ -201,7 +201,7 @@ label {
 .OKbtn {
 	font-style: normal;
 	width: 40px;
-	height: 25px;
+	height: 23px;
 	padding: 0px !important;
 	margin: 0px 10px 5px;
 }
