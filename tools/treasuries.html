@@ -1,7 +1,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- My Tools - v 7.0       -->
 <!-- treasuries3.html       -->
-<!-- last update 2023-03-30 -->
+<!-- last update 2023-03-31 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!DOCTYPE html>
@@ -28,8 +28,8 @@
 
   <!-- TABLE -->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="js/dataTreasTransposedRolling5.js"></script>
-  <script src="js/tabledrawTreas.js"></script>
+  <script src="js/dataTreasTransposedRolling5v2.js"></script>
+  <script src="js/tabledrawTreas2.js"></script>
   <script>
       google.charts.load('current', {'packages':['table']});
       google.charts.setOnLoadCallback(drawTable);
@@ -69,7 +69,7 @@
           <ul class="nav navbar-nav">
             <li><a class="btn" href="index.html">Home</a></li>
             <li><a class="btn" href="currency.html">EUR/USD</a></li>
-            <li><a class="btn active" href="treasuries.html">Treasurys</a></li>
+            <li><a class="btn active" href="treasuries.html">Treasuries</a></li>
             <li><a class="btn" href="wildlifegallery.html">Gallery</a></li> 
           </ul>
         </div>
@@ -93,7 +93,7 @@
         </div>
         <div class="col-xs-12 col-md-6">
           <details>
-            <summary>Latest Treasury par yield curve rates (%), rolling 6 business days</summary>
+            <summary>Treasury par yield curve rates (%)</summary>
             <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2023" target="_blank">U.S. Treasury</a>. This table shows the rates for the last 6 business days for Treasury bills, notes, and bonds.</p>
           </details>
           <div id="table_div_Treas" class="table"></div>
@@ -123,7 +123,7 @@
           <form>
             <p class="refresh">
               <input type="radio" id="treasAll" name="series" onclick="show(this)">
-              <label for="treasAll">All Treasurys</label>
+              <label for="treasAll">All Treasuries</label>
               <input type="radio" id="treasBills" name="series" onclick="show(this)">
               <label for="treasBills">Bills</label>
               <input type="radio" id="treasNotes" name="series" onclick="show(this)">
@@ -177,24 +177,6 @@
 
   <!-- More JavaScript -->
   <script src="js/updatedate.js"></script>
-
-
-<!-- <script type="text/javascript">
-function myPick() {
-    console.log("treasAll: " + document.getElementById("treasAll").value);
-    console.log("treasBills: " + document.getElementById("treasBills").value);
-    console.log("treasNotes: " + document.getElementById("treasNotes").value);
-    console.log("treasBonds: " + document.getElementById("treasBonds").value);
-
-  // if(document.getElementById("treasAll").value == "on") {
-  //   console.log("treasAll");
-  // } else if(document.getElementById("treasBills").value == "on") {
-  //   console.log("treasBills");
-  // }
-}
-
-
-</script> -->
 
 </body>
 </html>

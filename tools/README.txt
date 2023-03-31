@@ -1,20 +1,21 @@
-Version 7.0 - 2023-03-30
+Version 7.0 - 2023-03-31
 ------------------------
 
 This version includes:
 
-Home:		Treasurys, JavaScript
+Home:		Treasuries, JavaScript
 
-Currency:   	Treasurys, typos
+Currency:   	Treasuries, typos
 
-Treasuries:	Treasurys 
+Treasuries:	Treasuries 
 		legend margin graph 2
 		created graph 3 with JavaScript to select series
+		reformatted table
 
-Gallery:    	Treasurys
+Gallery:    	Treasuries
 
-CSS:	    	
+CSS:	    	Argentinian Blue (active button)
 
-JS:		Treasurys graph 3
+JS:		Treasuries graph 3
 
 BAT:
