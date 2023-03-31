@@ -1,7 +1,7 @@
 //----------------------------
 //-- My Tools - v 7.0       --
 //-- chartdrawTreas.js      --
-//-- last update 2023-03-30 --
+//-- last update 2023-03-31 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -154,6 +154,6 @@ function drawChart2() {
         chart.draw(data, options);
     }
     catch(err) {
-        document.getElementById("chart_div_Treas2").innerHTML = "Please choose one of the option above and click OK.";
+        document.getElementById("chart_div_Treas2").innerHTML = "Choose an option above and click OK.";
     }
 }

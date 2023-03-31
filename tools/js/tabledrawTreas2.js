@@ -1,6 +1,6 @@
 //----------------------------
-//-- My Tools - v 6.0       --
-//-- tabledrawTreas.js      --
+//-- My Tools - v 7.0       --
+//-- tabledrawTreas2.js     --
 //-- last update 2023-03-31 --
 //----------------------------
 
@@ -8,7 +8,7 @@
 //-- Original code - py4e - Capstone project
 
 function drawTable() {
-    var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling5);
+    var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling5v2);
 
     var formatter0 = new google.visualization.ColorFormat();
     formatter0.addRange(null, null, '#0074cc');
