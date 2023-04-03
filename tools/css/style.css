@@ -90,6 +90,11 @@ h2 {
 	color: #0074cc;		/*blue*/
 	font-weight: bold;
 	font-size: 130% !important;
+	margin-top: 0px;
+}
+
+h2 > p > a:last-of-type {
+	margin-bottom: 15px !important;
 }
 
 h1 > a > i, h2 > a > i, th {
