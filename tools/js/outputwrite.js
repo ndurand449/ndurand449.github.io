@@ -1,7 +1,7 @@
 //----------------------------
-//-- My Tools - v 6.0       --
+//-- My Tools - v 8.0       --
 //-- outputwrite.js         --
-//-- last update 2023-03-18 --
+//-- last update 2023-04-02 --
 //----------------------------
 
 //-- Outputs for currency.html
@@ -20,3 +20,8 @@ output2avg = '<br><ul><li>Average rate:   ' + output2.avgrate + '</li>';
 output2min = '<li>Minimum rate:   ' + output2.avgratemin + '</li>';
 output2max = '<li>Maximum rate:   ' + output2.avgratemax + '</li></ul>'
 document.getElementById("output2txt").innerHTML = output2txt1 + output2txt2 + output2avg + output2min + output2max;
+
+
+//-- Outputs for treasuries.html
+//-- Reads from FOMCcal.js
+

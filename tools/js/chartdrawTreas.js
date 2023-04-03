@@ -1,7 +1,7 @@
 //----------------------------
-//-- My Tools - v 7.0       --
+//-- My Tools - v 8.0       --
 //-- chartdrawTreas.js      --
-//-- last update 2023-04-01 --
+//-- last update 2023-04-03 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
@@ -39,6 +39,29 @@ len = dataTreasRolling28.length;
 d = dataTreasRolling28[len-1][0]
 y = d.getFullYear();
 document.getElementById("updatetre").innerHTML = "Data updated on " + txt0 + "/" + y;
+}
+
+
+//-- #5: FOMC fund rate
+//---------------------
+
+function drawChart3() {
+    var data = google.visualization.arrayToDataTable(FOMCfr);
+
+    var options = {
+        fontSize: '11',
+        fontName: 'Verdana',
+        title: 'Federal Funds Rate',
+        titleTextStyle: {color:'#7d4600', fontSize: '12'},
+        chartArea: {left:'12%', top:'12%', width:'85%', height:'70%'},
+        vAxis: {title:'Rate (%)', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
+                gridlines: {color: '#c1df1f'}},
+        hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
+                gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
+    };
+
+    var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div_Treas3'));
+    chart.draw(data, options);
 }
 
 
@@ -157,3 +180,5 @@ function drawChart2() {
         document.getElementById("chart_div_Treas2").innerHTML = "Choose an option above and click OK.";
     }
 }
+
+

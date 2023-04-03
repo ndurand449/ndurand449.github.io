@@ -1,13 +1,13 @@
 //----------------------------
-//-- My Tools - v 7.0       --
+//-- My Tools - v 8.0       --
 //-- tabledrawTreas2.js     --
-//-- last update 2023-03-31 --
+//-- last update 2023-04-03 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
 //-- Original code - py4e - Capstone project
 
-function drawTable() {
+function drawTable0() {
     var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling5v2);
 
     var formatter0 = new google.visualization.ColorFormat();
@@ -31,5 +31,18 @@ function drawTable() {
     formatter3.format(data, 6);   
 
     var table = new google.visualization.Table(document.getElementById('table_div_Treas'));
+    table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
+}
+
+
+function drawTable1() {
+    var data = google.visualization.arrayToDataTable(FOMCcal);
+    var table = new google.visualization.Table(document.getElementById('table_div_FOMCcal'));
+    table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
+}
+
+function drawTable2() {
+    var data = google.visualization.arrayToDataTable(FOMCev);
+    var table = new google.visualization.Table(document.getElementById('table_div_FOMCev'));
     table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
 }
