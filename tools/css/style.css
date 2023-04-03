@@ -1,7 +1,7 @@
 /*----------------------------*/
-/*-- My Tools - v 7.0       --*/
+/*-- My Tools - v 8.0       --*/
 /*-- style.css              --*/
-/*-- last update 2023-03-31 --*/
+/*-- last update 2023-04-02 --*/
 /*----------------------------*/
 
 
@@ -125,7 +125,7 @@ details > p {
 	padding-bottom: 10px;
 }
 
-details > p > a {
+details > p > a, p > a {
 	color: #c14b0b;		/*mahogany*/
 	text-decoration: underline;
 }
