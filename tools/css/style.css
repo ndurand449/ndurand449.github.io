@@ -79,22 +79,18 @@ main {
 	margin: 0px 5px;
 }
 
-h1 {
+h1, h2 {
 	color: #0074cc;		/*blue*/
 	font-weight: bold;
-	font-size: 150% !important;
 	margin-top: 0px;
+}
+
+h1 {
+	font-size: 150% !important;
 }
 
 h2 {
-	color: #0074cc;		/*blue*/
-	font-weight: bold;
 	font-size: 130% !important;
-	margin-top: 0px;
-}
-
-h2 > p > a:last-of-type {
-	margin-bottom: 15px !important;
 }
 
 h1 > a > i, h2 > a > i, th {
@@ -114,7 +110,7 @@ summary {
 	display: list-item !important;
 	list-style-position: inside;
 	font-weight: bold;
-	font-size: 110%;
+	font-size: 130%;
 	color: #c14b0b;		/*mahogany*/
 }
 
@@ -160,15 +156,22 @@ li {
 }
 
 .chart {
-/*	width: 100% !important;*/
 	min-height: 240px;
 	margin-bottom: 20px;
 }
 
-th, td, .google-visualization-table-td.google-visualization-table-type-number {	
+th {	
 	text-align: center !important;
 }
 
+/*th, td, .google-visualization-table-td.google-visualization-table-type-number {	
+	text-align: center !important;
+}
+*/
+/*#table_div_FOMCev > .google-visualization-table-td.google-visualization-table-type-number {	
+	text-align: left !important;
+}
+*/
 .google-visualization-table-table {	
 	font-family: Verdana,Helvetica,Arial,sans-serif !important;
 	font-size: 85% !important;
@@ -188,7 +191,7 @@ div > .legend {
 	height: 23px;
 }
 
-.legend:last-of-type {
+a.link:last-of-type, .legend:last-of-type {
 	margin-bottom: 15px !important;
 }
 
@@ -209,6 +212,7 @@ label {
 	height: 23px;
 	padding: 0px !important;
 	margin: 0px 10px 5px;
+	text-decoration: none;
 }
 
 #selection {
