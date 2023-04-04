@@ -58,6 +58,7 @@ function drawChart3() {
                 gridlines: {color: '#c1df1f'}},
         hAxis: {title:'Date', titleTextStyle: {color:'#7d4600', bold: true, italic: false},
                 gridlines: {color: '#c1df1f', count: 5}, format: 'MMM d'},
+        tooltip: {trigger:'none'},
     };
 
     var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div_Treas3'));

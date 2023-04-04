@@ -1,13 +1,13 @@
 FOMCcal = [ ['2023', "2023 (cont'd)"],
 	['May 2-3', 'Sept 19-20'],
 	['June 13-14', 'Oct 31 - Nov 1'],
-	['July 25-26', 'Dec, 12-13'],
+	['July 25-26', 'Dec 12-13'],
 	];
 
 FOMCev = [ ['Date', 'Event'],
-	['03/22', 'FOMC raised the Federal funds rate by 25 bps to 5.00%.'],
-	['03/08', 'Silicon Valley Bank (SVB) announced major losses.'],
 	['02/01', 'FOMC raised the Federal funds rate by 25 bps to 4.75%.'],
+	['03/08', 'Silicon Valley Bank (SVB) announced major losses.'],
+	['03/22', 'FOMC raised the Federal funds rate by 25 bps to 5.00%.'],
 	];
 
 FOMCfr = [ ['Date', 'Rate'],
