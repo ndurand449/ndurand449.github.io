@@ -82,10 +82,10 @@ main {
 h1, h2 {
 	color: #0074cc;		/*blue*/
 	font-weight: bold;
-	margin-top: 0px;
 }
 
 h1 {
+	margin-top: 0px;
 	font-size: 150% !important;
 }
 
