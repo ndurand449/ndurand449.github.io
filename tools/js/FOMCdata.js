@@ -1,6 +1,6 @@
 FOMCcal = [ ['2023', "2024", "2024 (cont'd)"],
-	['Oct 31 - Nov 1', 'Jan 30-31', 'Jul 30-31'],
-	['Dec 12-13', 'Mar 19-20', 'Sep 17-18'],
+	['Dec 12-13', 'Jan 30-31', 'Jul 30-31'],
+	[null, 'Mar 19-20', 'Sep 17-18'],
 	[null, 'Avr 30 - May 1', 'Nov 6-7'],
 	[null, 'Jun 11-12', 'Dec 17-18'],
 	];
@@ -13,6 +13,7 @@ FOMCev = [ ['Date', 'Event'],
 	['06/14', 'FOMC maintained the Federal funds rate at a range of 5.00% to 5.25%.'],
 	['07/26', 'FOMC raised the Federal funds rate by 25 bps to a range of 5.25% to 5.50%.'],
 	['09/20', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['11/01', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
 	];
 
 FOMCfr = [ ['Date', 'Rate'],
@@ -29,4 +30,5 @@ FOMCfr = [ ['Date', 'Rate'],
 	[new Date(2023,4,3),5.00],
 	[new Date(2023,6,25),5.25],
 	[new Date(2023,10,1),5.50],
+	[new Date(2023,11,13),5.50],
 	];
