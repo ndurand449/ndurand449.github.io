@@ -4,14 +4,14 @@ FOMCcal = [ ['2024', "2024 (cont'd)"],
 	];
 
 FOMCev = [ ['Date', 'Event'],
-	['07/26', 'FOMC raised the Federal funds rate by 25 bps to a range of 5.25% to 5.50%.'],
-	['09/20', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
-	['11/01', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
-	['12/13', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
-	['01/31', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
-	['03/20', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
-	['05/01', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
-	['06/12', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['07/26/2023', 'FOMC raised the Federal funds rate by 25 bps to a range of 5.25% to 5.50%.'],
+	['09/20/2023', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['11/01/2023', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['12/13/2023', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['01/31/2024', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['03/20/2024', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['05/01/2024', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
+	['06/12/2024', 'FOMC maintained the Federal funds rate at a range of 5.25% to 5.50%.'],
 	];
 
 FOMCfr = [ ['Date', 'Rate'],
