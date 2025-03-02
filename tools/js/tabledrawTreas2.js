@@ -1,12 +1,13 @@
 //----------------------------
-//-- My Tools - v 8.0       --
+//-- My Tools - v 10.0      --
 //-- tabledrawTreas2.js     --
-//-- last update 2023-04-03 --
+//-- last update 2025-02-25 --
 //----------------------------
 
 //-- Currency forecast - Google Charts - https://developers.google.com/chart/interactive/docs/
 //-- Original code - py4e - Capstone project
 
+//-- Treasury par yield curve rates (%)
 function drawTable0() {
     var data = google.visualization.arrayToDataTable(dataTreasTransposedRolling5v2);
 
@@ -34,13 +35,14 @@ function drawTable0() {
     table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
 }
 
-
+//-- Upcoming FOMC meetings
 function drawTable1() {
     var data = google.visualization.arrayToDataTable(FOMCcal);
     var table = new google.visualization.Table(document.getElementById('table_div_FOMCcal'));
     table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
 }
 
+//-- Major events since 1/1/2022
 function drawTable2() {
     var data = google.visualization.arrayToDataTable(FOMCev);
     var table = new google.visualization.Table(document.getElementById('table_div_FOMCev'));
