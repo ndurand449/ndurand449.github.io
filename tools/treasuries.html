@@ -1,8 +1,11 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- My Tools - v 9.0       -->
+<!-- My Tools - v 10.0      -->
 <!-- treasuries3.html       -->
-<!-- last update 2025-01-04 --> <!-- Manually updated new year in U.S. Treasury website link --> 
-<!-- last update 2025-01-30 --> <!-- Manually updated new year in Major Events title --> 
+<!-- last update 2025-01-04 --> <!-- Manually updated new year in U.S. Treasury  --> 
+<!--                                     website link                            --> 
+<!-- last update 2025-01-30 --> <!-- Manually updated new year in Major Events   --> 
+<!--                        --> <!--     title                                   --> 
+<!-- last update 2025-02-25 --> <!-- Major update: new 6-wk bill                 --> 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!DOCTYPE html>
@@ -27,7 +30,7 @@
   <!-- JavaScript -->
   <script src="https://kit.fontawesome.com/5dc8c48ef1.js" crossorigin="anonymous"></script>
 
-  <!-- TABLE -->
+  <!-- TABLES -->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="js/dataTreasTransposedRolling5v2.js"></script>
   <script src="js/FOMCdata.js"></script>
@@ -112,7 +115,7 @@
         </div>
 
         <div class="col-xs-12 col-md-6">
-          <h2>2023-2025 Major events</h2>
+          <h2>Major events since 1/1/2022</h2>
           <div id="table_div_FOMCev" class="table"></div>
         </div>
 
@@ -132,7 +135,7 @@
       <div class="row">
         <div class="col-xs-12">
           <details>
-            <summary>Par yield curve, rolling 28 days</summary>
+            <summary>Par yield curve rolling 28 days</summary>
             <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2025" target="_blank">U.S. Treasury</a>. This graph shows historical daily rates for the past 4 weeks for Treasury bills, notes, and bonds.</p>
           </details>
           <div id="chart_div_Treas1" class="chart"></div>
@@ -146,7 +149,7 @@
       <div class="row">
         <div class="col-xs-12">
           <details>
-            <summary>Par yield curve, year-to-date</summary>
+            <summary>Par yield curve since 1/1/2023</summary>
             <p>Data retrieved weekly or more frequently from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2025" target="_blank">U.S. Treasury</a>. This graph shows historical daily rates since the beginning of the year for the chosen Treasury bills, notes, and bonds.</p>
           </details>
           <form>
@@ -165,31 +168,33 @@
 
               <p id="selection" class="refresh">Select:
                 <input type="checkbox" id="m1" name="pick" value="m1">
-                <label for="m1">1 Mo</label>
+                <label for="m1">4-wk</label>
+                <input type="checkbox" id="m15" name="pick" value="m15">
+                <label for="m15">6-wk</label>
                 <input type="checkbox" id="m2" name="pick" value="m2">
-                <label for="m2">2 Mo</label>
+                <label for="m2">8-wk</label>
                 <input type="checkbox" id="m3" name="pick" value="m3">
-                <label for="m3">3 Mo</label>
+                <label for="m3">13-wk</label>
                 <input type="checkbox" id="m4" name="pick" value="m4">
-                <label for="m4">4 Mo</label>
+                <label for="m4">17-wk</label>
                 <input type="checkbox" id="m6" name="pick" value="m6">
-                <label for="m6">6 Mo</label>
+                <label for="m6">26-wk</label>
                 <input type="checkbox" id="y1" name="pick" value="y1">
-                <label for="y1">1 Yr</label>
+                <label for="y1">52-wk</label>
                 <input type="checkbox" id="y2" name="pick" value="y2">
-                <label for="y2">2 Yr</label>
+                <label for="y2">2-yr</label>
                 <input type="checkbox" id="y3" name="pick" value="y3">
-                <label for="y3">3 Yr</label>
+                <label for="y3">3-yr</label>
                 <input type="checkbox" id="y5" name="pick" value="y5">
-                <label for="y5">5 Yr</label>
+                <label for="y5">5-yr</label>
                 <input type="checkbox" id="y7" name="pick" value="y7">
-                <label for="y7">7 Yr</label>
+                <label for="y7">7-yr</label>
                 <input type="checkbox" id="y10" name="pick" value="y10">
-                <label for="y10">10 Yr</label>
+                <label for="y10">10-yr</label>
                 <input type="checkbox" id="y20" name="pick" value="y20">
-                <label for="y20">20 Yr</label>
+                <label for="y20">20-yr</label>
                 <input type="checkbox" id="y30" name="pick" value="y30">
-                <label for="y30">30 Yr</label><br>
+                <label for="y30">30-yr</label><br>
               </p>
             </p>
           </form>
