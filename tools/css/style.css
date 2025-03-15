@@ -1,7 +1,7 @@
 /*----------------------------*/
-/*-- My Tools - v 8.0       --*/
+/*-- My Tools - v 10.4      --*/
 /*-- style.css              --*/
-/*-- last update 2023-04-02 --*/
+/*-- last update 2025-03-15 --*/
 /*----------------------------*/
 
 
@@ -188,7 +188,7 @@ div > .legend {
 }
 
 .legend {
-	height: 23px;
+	height: 17px;
 }
 
 a.link:last-of-type, .legend:last-of-type {
