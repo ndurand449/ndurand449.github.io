@@ -1,7 +1,6 @@
 FOMCcal = [ ["2025", "2025", "2025"],
-	['Mar 18-19', 'Jul 29-30', 'Dec 9-10'],
-	['May 6-7', 'Sep 16-17', null],
-	['Jun 17-18', 'Oct 28-29', null],
+	['May 6-7', 'Jul 29-30', 'Oct 28-29'],
+	['Jun 17-18', 'Sep 16-17', 'Dec 9-10'],
 	];
 
 FOMCev = [ ['When', 'Event'],
@@ -11,6 +10,7 @@ FOMCev = [ ['When', 'Event'],
 	['11/07/2024', 'FOMC lowered the Federal funds rate by 25 bps to a range of 4.50% to 4.75%.'],
 	['12/18/2024', 'FOMC lowered the Federal funds rate by 25 bps to a range of 4.25% to 4.50%.'],
 	['01/29/2025', 'FOMC maintained the Federal funds rate at a range of 4.25% to 4.50%.'],
+	['03/19/2025', 'FOMC maintained the Federal funds rate at a range of 4.25% to 4.50%.'],
 	];
 
 FOMCfr = [ ['Date', 'Rate'],
@@ -29,5 +29,5 @@ FOMCfr = [ ['Date', 'Rate'],
 	[new Date(2024,8,18),5.50],
 	[new Date(2024,10,7),5.00],
 	[new Date(2024,11,18),4.75],
-	[new Date(2025,2,19),4.50],
+	[new Date(2025,4,7),4.50],
 	];
