@@ -1,7 +1,7 @@
 /*----------------------------*/
 /*-- My Tools - v 10.4      --*/
 /*-- style.css              --*/
-/*-- last update 2025-03-15 --*/
+/*-- last update 2025-03-21 --*/
 /*----------------------------*/
 
 
@@ -241,6 +241,10 @@ label {
 	img {
 		width: 85% !important;
 		margin: 0 auto;
+	}
+
+	.TD_btn {
+		width: 25% !important;
 	}
 
 	#chart_div_Treas0 {
