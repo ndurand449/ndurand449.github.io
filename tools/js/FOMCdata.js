@@ -4,7 +4,7 @@ FOMCcal = [ ["2025", "2025", "2025"],
 	];
 
 FOMCev = [ ['When', 'Event'],
-	['throughout 2022', 'FOMC raised the Federal funds rate by 25 to 75 bps 8 times to a range of 5.25% to 5.50%.'],
+	['throughout 2022', 'FOMC raised the Federal funds rate by 25 to 75 bps 8 times to a range of 3.75% to 4.00%.'],
 	['until 07/26/2023', 'FOMC raised the Federal funds rate by 25 bps 4 times to a range of 5.25% to 5.50%.'],
 	['09/18/2024', 'FOMC lowered the Federal funds rate by 50 bps to a range of 4.75% to 5.00%.'],
 	['11/07/2024', 'FOMC lowered the Federal funds rate by 25 bps to a range of 4.50% to 4.75%.'],
