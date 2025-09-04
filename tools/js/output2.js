@@ -1,10 +1,10 @@
 var output2 = 
 {
-	lastrdate: "2025-07-15",
+	lastrdate: "2025-09-04",
 	lastrdate2: "2025-12-31",
 	inpry: 2025,
 	Pair: "EUR-USD",
-	avgrate: 1.13121,
-	avgratemin: 1.10316,
-	avgratemax: 1.15723
+	avgrate: 1.13311,
+	avgratemin: 1.11606,
+	avgratemax: 1.13460
 };
