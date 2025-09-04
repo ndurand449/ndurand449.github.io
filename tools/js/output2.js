@@ -6,5 +6,5 @@ var output2 =
 	Pair: "EUR-USD",
 	avgrate: 1.13311,
 	avgratemin: 1.11606,
-	avgratemax: 1.13460
+	avgratemax: 1.14413
 };
