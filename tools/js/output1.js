@@ -1,11 +1,11 @@
 var output1 = 
 {
-	lastrdate: "2026-06-05",
+	lastrdate: "2026-07-03",
 	inpry: 2026,
 	Pair: "EUR-USD",
-	avgrate: 1.16940,
-	minrate: 1.14346,
-	mindate: "2026-03-15",
+	avgrate: 1.16608,
+	minrate: 1.13533,
+	mindate: "2026-06-24",
 	maxrate: 1.20170,
 	maxdate: "2026-01-27"
 };
