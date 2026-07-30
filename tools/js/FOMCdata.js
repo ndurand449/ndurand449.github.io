@@ -1,6 +1,8 @@
-FOMCcal = [ ["2026", "2026"],
-	['Jul 28-29', 'Oct 27-28'],
-	['Sep 15-16', 'Dec 8-9'],
+FOMCcal = [ ["2026", "2027", "2027"],
+	['Sep 15-16', 'Jan 26-27', 'Jul 27-28'],
+	['Oct 27-28', 'Mar 16-17', 'Sep 14-15'],
+	['Dec 8-9', 'Apr 27-28', 'Oct 26-27'],
+	[null, 'Jun 8-9', 'Dec 7-8'],
 	];
 
 FOMCev = [ ['When', 'Event'],
@@ -17,6 +19,7 @@ FOMCev = [ ['When', 'Event'],
 	['03/18/2026', 'FOMC maintained the Federal funds rate at a range of 3.50% to 3.75%.'],
 	['04/29/2026', 'FOMC maintained the Federal funds rate at a range of 3.50% to 3.75%.'],
 	['06/17/2026', 'FOMC maintained the Federal funds rate at a range of 3.50% to 3.75%.'],
+	['07/29/2026', 'FOMC maintained the Federal funds rate at a range of 3.50% to 3.75%.'],
 	];
 
 FOMCfr = [ ['Date', 'Rate'],
@@ -38,5 +41,5 @@ FOMCfr = [ ['Date', 'Rate'],
 	[new Date(2025,8,17),4.50],
 	[new Date(2025,9,29),4.25],
 	[new Date(2025,11,10),4.00],
-	[new Date(2026,06,29),3.75],
+	[new Date(2026,08,16),3.75],
 	];
